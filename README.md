@@ -11,7 +11,6 @@
     <img src="https://skillicons.dev/icons?i=java,html,css,javascript,github,idea,vscode,mysql,postman,docker,spring,maven,gradle" />
    <img src="https://cdn.simpleicons.org/dbeaver/cfcfcf" height="48" />
 </div>
-
 <br/>
 
 <h2 align="center">⚡ GitHub Stats ⚡</h2>
