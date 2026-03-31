@@ -17,6 +17,7 @@ jobs:
           show_duration: true
           max_videos: 6
           card_width: 280
+          output_type: html
           max_title_lines: 2
           background_color: "#1f2335"
           title_color: "#e6edf3"
