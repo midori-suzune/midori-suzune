@@ -21,9 +21,7 @@ jobs:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
-          set -euo pipefail
-          mkdir -p wakatime
-          curl -fsSL "https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=Suzune&api_key=$WAKATIME_API_KEY&github_token=$GH_TOKEN&components=1&component1_type=weekly_avg" \
+          curl -fsSL "https://wakatime-readme-stats.vercel.app/api/wakatimeStats?username=Suzune&api_key=$WAKATIME_API_KEY&github_token=$GH_TOKEN&components=1&component1_type=weekly_avg&component1_default_source=waka" \
           -o wakatime/stats.svg
 
       - name: Bump README cache-buster for wakatime/stats.svg (daily)
