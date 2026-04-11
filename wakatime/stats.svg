@@ -39,16 +39,16 @@
 <rect x="210" y="46.5" width="30" height="60" fill="#9c8f80" rx="3" ry="3" />
 <text x="225" y="42.5" font-size="9" text-anchor="middle" fill="#5f574f">03:05</text>
 <text x="225" y="118.5" font-weight="bold" font-size="10" text-anchor="middle" fill="#5f574f">Fri</text>
-<text x="225" y="130.5" font-size="9" text-anchor="middle" fill="#5f574f">16.0%</text>
-<rect x="255" y="61.17683717423548" width="30" height="45.32316282576452" fill="#9c8f80" rx="3" ry="3" />
-<text x="270" y="57.17683717423548" font-size="9" text-anchor="middle" fill="#5f574f">02:20</text>
+<text x="225" y="130.5" font-size="9" text-anchor="middle" fill="#5f574f">15.9%</text>
+<rect x="255" y="60.80026927985426" width="30" height="45.69973072014574" fill="#9c8f80" rx="3" ry="3" />
+<text x="270" y="56.80026927985426" font-size="9" text-anchor="middle" fill="#5f574f">02:21</text>
 <text x="270" y="118.5" font-weight="bold" font-size="10" text-anchor="middle" fill="#5f574f">Sat</text>
 <text x="270" y="130.5" font-size="9" text-anchor="middle" fill="#5f574f">12.1%</text>
 <rect x="300" y="50.622830214358395" width="30" height="55.877169785641605" fill="#9c8f80" rx="3" ry="3" />
 <text x="315" y="46.622830214358395" font-size="9" text-anchor="middle" fill="#5f574f">02:52</text>
 <text x="315" y="118.5" font-weight="bold" font-size="10" text-anchor="middle" fill="#5f574f">Sun</text>
 <text x="315" y="130.5" font-size="9" text-anchor="middle" fill="#5f574f">14.9%</text>
-      <text x="177.5" y="156.5" font-size="12" text-anchor="middle" fill="#5f574f"><tspan font-weight="bold">Total:</tspan> 19 hrs 21 mins</text>
+      <text x="177.5" y="156.5" font-size="12" text-anchor="middle" fill="#5f574f"><tspan font-weight="bold">Total:</tspan> 19 hrs 22 mins</text>
     </g>
 <g transform="translate(0, 242.5) scale(1)">
       <text x="197.5" y="25" font-size="16" text-anchor="middle" fill="#5f574f" font-family="Calibri" font-weight="bold">Weekly Ranking</text>
@@ -72,7 +72,7 @@
     <rect x="160" y="65" width="160" height="8" fill="#9c8f80" rx="4" opacity="0.3"/>
     <rect x="160" y="65" width="160" height="8" fill="#9c8f80" rx="4"/>
     <text x="320" y="95" font-size="11" text-anchor="end" fill="#5f574f" font-family="Calibri">
-      19.9/12.9 hrs
+      21.3/13.0 hrs
     </text></g>
     </g>
 </svg>
