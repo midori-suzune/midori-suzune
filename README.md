@@ -77,15 +77,15 @@ Date       Topic          Article                                               
 
 <!-- DAILY_WATCHING:START -->
 ```text
-📺 Daily Watching  30 days 🔥
+📺 Daily Watching  31 days 🔥
 
 Date       Topic          Title                                                  New Vocab
 ────────────────────────────────────────────────────────────────────────────────────────────────────
+26.9.11    Language        Can apps teach you a language?                         11 words
+
 26.9.9     Table          Talking At The Table                                    13 words
 
 26.9.7     Climate         Climate and extreme weather                            12 words
-
-26.9.7     Food and Hea…   Bitter food, better health                             13 words
 ```
 <!-- DAILY_WATCHING:END -->
 
