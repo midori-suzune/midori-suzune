@@ -81,11 +81,11 @@ Date       Topic          Article                                               
 
 Date       Topic          Title                                                  New Vocab
 ────────────────────────────────────────────────────────────────────────────────────────────────────
+26.9.13    Work           Are you unhappy at work?                                16 words
+
+26.9.13    Toys           Grown-ups buying kids’ toys                              7 words
+
 26.9.11    Language        Can apps teach you a language?                         11 words
-
-26.9.9     Table          Talking At The Table                                    13 words
-
-26.9.7     Climate         Climate and extreme weather                            12 words
 ```
 <!-- DAILY_WATCHING:END -->
 
