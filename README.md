@@ -31,9 +31,6 @@
   <!-- YOUPASS_STREAK_BADGE:START -->
   <img src="assets/ielts-streak.svg" alt="IELTS Streak: 88 days" />
 <!-- YOUPASS_STREAK_BADGE:END -->
-  <!-- LUYENNOI_STREAK_BADGE:START -->
-  <img src="assets/luyennoi-streak.svg" alt="Luyennoi Streak: 4 days" />
-<!-- LUYENNOI_STREAK_BADGE:END -->
 </p>
 <!-- YOUPASS_BADGES:END -->
 
@@ -63,7 +60,7 @@ Date        Skill          Title                                           Score
 
 <!-- DAILY_READING:START -->
 ```text
-📰 Daily Reading  20 days 🔥
+📰 Daily Reading  25 articles 🔥
 
 Date       Topic          Article                                                New Vocab
 ────────────────────────────────────────────────────────────────────────────────────────────────────
@@ -77,7 +74,7 @@ Date       Topic          Article                                               
 
 <!-- DAILY_WATCHING:START -->
 ```text
-📺 Daily Watching  31 days 🔥
+📺 Daily Watching  41 videos 🔥
 
 Date       Topic          Title                                                  New Vocab
 ────────────────────────────────────────────────────────────────────────────────────────────────────

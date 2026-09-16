@@ -196,6 +196,27 @@ async function countDailyLearningDays(sourcePath, fileName = process.env.DAILY_R
   return new Set(entries.map((entry) => entry.date).filter(Boolean)).size;
 }
 
+async function countDailyLearningFiles(sourcePath, fileName = process.env.DAILY_READING_FILE) {
+  const stat = await fs.stat(sourcePath);
+
+  if (stat.isFile() && sourcePath.toLowerCase().endsWith(".json")) {
+    const data = JSON.parse(await fs.readFile(sourcePath, "utf8"));
+    const entries = Array.isArray(data) ? data : data?.items ?? [data];
+    return entries.length;
+  }
+
+  if (stat.isFile()) {
+    return 1;
+  }
+
+  if (fileName) {
+    return 1;
+  }
+
+  const files = await listMarkdownFiles(sourcePath);
+  return files.length;
+}
+
 async function chooseMarkdownFile(sourcePath, requestedFileName = process.env.DAILY_READING_FILE) {
   const stat = await fs.stat(sourcePath);
   if (stat.isFile()) {
@@ -277,18 +298,19 @@ async function loadDailyLearningData(sourcePath, fileName = process.env.DAILY_RE
   );
 }
 
-function formatHeading(heading, streakDays) {
-  const days = Number(streakDays);
+function formatHeading(heading, count, unit = "days") {
+  const num = Number(count);
 
-  if (streakDays === undefined || streakDays === null || !Number.isFinite(days) || days < 0) {
+  if (count === undefined || count === null || !Number.isFinite(num) || num < 0) {
     return heading;
   }
 
-  const roundedDays = Math.floor(days);
-  return `${heading}  ${roundedDays} ${roundedDays === 1 ? "day" : "days"} 🔥`;
+  const roundedCount = Math.floor(num);
+  const label = roundedCount === 1 ? unit.replace(/s$/, "") : unit;
+  return `${heading}  ${roundedCount} ${label} 🔥`;
 }
 
-function formatDailyLearning(data, heading = "📰 Daily Reading", titleHeader = "Article", streakDays) {
+function formatDailyLearning(data, heading = "📰 Daily Reading", titleHeader = "Article", count, unit = "days") {
   const entries = normalizeEntries(data);
   const widths = {
     date: 9,
@@ -317,7 +339,7 @@ function formatDailyLearning(data, heading = "📰 Daily Reading", titleHeader =
 
   return [
     "```text",
-    formatHeading(heading, streakDays),
+    formatHeading(heading, count, unit),
     "",
     header,
     "─".repeat(Math.max(TABLE_SEPARATOR_WIDTH, header.length)),
@@ -326,8 +348,8 @@ function formatDailyLearning(data, heading = "📰 Daily Reading", titleHeader =
   ].join("\n");
 }
 
-function formatDailyReading(data, streakDays) {
-  return formatDailyLearning(data, "📰 Daily Reading", "Article", streakDays);
+function formatDailyReading(data, count) {
+  return formatDailyLearning(data, "📰 Daily Reading", "Article", count, "articles");
 }
 
 function replaceTaggedSection(readme, content, startTag = START_TAG, endTag = END_TAG) {
@@ -357,9 +379,9 @@ async function updateReadme() {
   const readmePath = path.resolve(process.env.README_PATH || "README.md");
   const dataPath = path.resolve(process.env.DAILY_READING_PATH || DEFAULT_DATA_PATH);
   const data = await loadDailyLearningData(dataPath);
-  const streakDays = await countDailyLearningDays(dataPath);
+  const articleCount = await countDailyLearningFiles(dataPath);
   const readme = await fs.readFile(readmePath, "utf8");
-  const nextReadme = replaceTaggedSection(readme, formatDailyReading(data, streakDays));
+  const nextReadme = replaceTaggedSection(readme, formatDailyReading(data, articleCount));
 
   if (nextReadme === readme) {
     console.log("Daily Reading is already up to date.");
@@ -381,9 +403,11 @@ if (process.argv.includes("--help") || process.argv.includes("-h")) {
 
 module.exports = {
   countDailyLearningDays,
+  countDailyLearningFiles,
   formatDailyLearning,
   formatDailyReading,
   formatDate,
+  formatHeading,
   loadDailyLearningData,
   normalizeEntry,
   normalizeEntries,
