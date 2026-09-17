@@ -74,15 +74,15 @@ Date       Topic          Article                                               
 
 <!-- DAILY_WATCHING:START -->
 ```text
-📺 Daily Watching  41 videos 🔥
+📺 Daily Watching  44 videos 🔥
 
 Date       Topic          Title                                                  New Vocab
 ────────────────────────────────────────────────────────────────────────────────────────────────────
-26.9.13    Work           Are you unhappy at work?                                16 words
+26.9.17    Degrowth       What is degrowth?                                        2 words
 
-26.9.13    Toys           Grown-ups buying kids’ toys                              7 words
+26.9.17    Game           What if athletes were allowed to take drugs             18 words
 
-26.9.11    Language        Can apps teach you a language?                         11 words
+26.9.17    Screen Time     Limiting screen time for children                       4 words
 ```
 <!-- DAILY_WATCHING:END -->
 
