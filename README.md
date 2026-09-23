@@ -74,15 +74,15 @@ Date       Topic          Article                                               
 
 <!-- DAILY_WATCHING:START -->
 ```text
-📺 Daily Watching  45 videos 🔥
+📺 Daily Watching  46 videos 🔥
 
 Date       Topic          Title                                                  New Vocab
 ────────────────────────────────────────────────────────────────────────────────────────────────────
+26.9.23    feelings        How do you feel when someone says 'no'?                 7 words
+
 26.9.19    Children       Children in war zones                                    6 words
 
 26.9.17    Degrowth       What is degrowth?                                        2 words
-
-26.9.17    Game           What if athletes were allowed to take drugs             18 words
 ```
 <!-- DAILY_WATCHING:END -->
 
