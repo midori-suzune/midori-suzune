@@ -74,15 +74,15 @@ Date       Topic          Article                                               
 
 <!-- DAILY_WATCHING:START -->
 ```text
-📺 Daily Watching  46 videos 🔥
+📺 Daily Watching  47 videos 🔥
 
 Date       Topic          Title                                                  New Vocab
 ────────────────────────────────────────────────────────────────────────────────────────────────────
-26.9.23    feelings        How do you feel when someone says 'no'?                 7 words
+26.9.26    Feelings        How do you feel when someone says 'no'?                 7 words
+
+26.9.26    Football        How do footballers cope with high-pressure scenari…    17 words
 
 26.9.19    Children       Children in war zones                                    6 words
-
-26.9.17    Degrowth       What is degrowth?                                        2 words
 ```
 <!-- DAILY_WATCHING:END -->
 
