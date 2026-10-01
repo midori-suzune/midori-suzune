@@ -30,13 +30,6 @@
 
 <h2 align="center"> 📚 IELTS Progress 📚 </h2>
 
-<!-- YOUPASS_BADGES:START -->
-<p align="left">
-  <!-- YOUPASS_STREAK_BADGE:START -->
-  <img src="assets/ielts-streak.svg" alt="IELTS Streak: 88 days" />
-<!-- YOUPASS_STREAK_BADGE:END -->
-</p>
-<!-- YOUPASS_BADGES:END -->
 
 <!-- OPENQUIZ_STATS:START -->
 Mastered: 515 words
