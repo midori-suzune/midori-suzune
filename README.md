@@ -71,15 +71,15 @@ Date       Topic          Article                                               
 
 <!-- DAILY_WATCHING:START -->
 ```text
-📺 Daily Watching  49 videos 🔥
+📺 Daily Watching  50 videos 🔥
 
 Date       Topic          Title                                                  New Vocab
 ────────────────────────────────────────────────────────────────────────────────────────────────────
+26.10.4    heartbreak      Why does heartbreak hurt so much?                       6 words
+
 26.10.3    Email           Rude emails                                             9 words
 
 26.10.3    Advertising     How advertisers make us spend money                    10 words
-
-26.9.26    Feelings        How do you feel when someone says 'no'?                 7 words
 ```
 <!-- DAILY_WATCHING:END -->
 
