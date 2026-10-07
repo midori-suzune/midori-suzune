@@ -57,29 +57,29 @@ Date        Skill          Title                                           Score
 
 <!-- DAILY_READING:START -->
 ```text
-📰 Daily Reading  25 articles 🔥
+📰 Daily Reading  26 articles 🔥
 
 Date       Topic          Article                                                New Vocab
 ────────────────────────────────────────────────────────────────────────────────────────────────────
+26.10.7    Novel          Did You Think You Could Live Normally in a World_1       9 words
+
 26.9.3     Novel          transferred-to-another-world-and-became-a-teacher-C1     6 words
 
 26.8.27    General        Conservation Groups Sue Utah for Starving the Great…    38 words
-
-26.8.26    Soil           soil-as-a-public-good                                   29 words
 ```
 <!-- DAILY_READING:END -->
 
 <!-- DAILY_WATCHING:START -->
 ```text
-📺 Daily Watching  50 videos 🔥
+📺 Daily Watching  51 videos 🔥
 
 Date       Topic          Title                                                  New Vocab
 ────────────────────────────────────────────────────────────────────────────────────────────────────
-26.10.4    heartbreak      Why does heartbreak hurt so much?                       6 words
+26.10.7    Feeling        What is that unpleasant feeling on our skin             10 words
+
+26.10.7    Heartbreak      Why does heartbreak hurt so much?                       8 words
 
 26.10.3    Email           Rude emails                                             9 words
-
-26.10.3    Advertising     How advertisers make us spend money                    10 words
 ```
 <!-- DAILY_WATCHING:END -->
 
