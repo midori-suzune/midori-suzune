@@ -27,12 +27,25 @@ function renderBadge(masteredWords) {
   return `<img src="https://img.shields.io/badge/${name}-${rank.color}?style=flat" alt="${rank.name}" width="${width}" height="30" />`;
 }
 
+function renderProgress(masteredWords) {
+  const rank = getRank(masteredWords);
+  const nextRank = RANKS[RANKS.indexOf(rank) + 1];
+  if (!nextRank) {
+    return ["```text", `${rank.name}  ${"⣿".repeat(30)}  100.00%  (${masteredWords} words) — Đã đạt rank cao nhất`, "```"].join("\n");
+  }
+
+  const percent = Math.max(0, Math.min(100, masteredWords / nextRank.min * 100));
+  const filled = Math.round(percent / 100 * 30);
+  const bar = "⣿".repeat(filled) + "⣀".repeat(30 - filled);
+  return ["```text", `${rank.name} → ${nextRank.name}  ${bar}  ${percent.toFixed(2)}%  (${masteredWords} / ${nextRank.min})`, "```"].join("\n");
+}
+
 function replaceBadge(readme, masteredWords) {
   const pattern = /<!-- VOCAB_RANK:START -->[\s\S]*?<!-- VOCAB_RANK:END -->/;
   if (!pattern.test(readme)) {
     throw new Error("Missing VOCAB_RANK markers in README.");
   }
-  return readme.replace(pattern, `<!-- VOCAB_RANK:START -->\n${renderBadge(masteredWords)}\n<!-- VOCAB_RANK:END -->`);
+  return readme.replace(pattern, `<!-- VOCAB_RANK:START -->\n${renderBadge(masteredWords)}\n\n${renderProgress(masteredWords)}\n<!-- VOCAB_RANK:END -->`);
 }
 
 async function updateBadge() {
@@ -62,4 +75,4 @@ if (require.main === module) {
   });
 }
 
-module.exports = { getRank, renderBadge, replaceBadge };
+module.exports = { getRank, renderBadge, renderProgress, replaceBadge };
