@@ -67,7 +67,7 @@ Date        Skill          Title                                           Score
 
 Date       Topic          Article                                                New Vocab
 ────────────────────────────────────────────────────────────────────────────────────────────────────
-26.10.7    Novel          Did You Think You Could Live Normally in a World_1       9 words
+26.10.8    Novel          Did You Think You Could Live Normally in a World_1      22 words
 
 26.9.3     Novel          transferred-to-another-world-and-became-a-teacher-C1     6 words
 
