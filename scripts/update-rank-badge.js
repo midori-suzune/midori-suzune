@@ -23,7 +23,8 @@ function getRank(masteredWords) {
 function renderBadge(masteredWords) {
   const rank = getRank(masteredWords);
   const name = encodeURIComponent(rank.name.replace(/ /g, "_"));
-  return `<img src="https://img.shields.io/badge/${name}-${rank.color}?style=flat" alt="${rank.name}" height="26" />`;
+  const width = rank.name.length * 10 + 26;
+  return `<img src="https://img.shields.io/badge/${name}-${rank.color}?style=flat" alt="${rank.name}" width="${width}" height="36" />`;
 }
 
 function replaceBadge(readme, masteredWords) {
