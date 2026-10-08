@@ -5,26 +5,19 @@ const path = require("node:path");
 
 // Keep these thresholds in sync with widget_dicord/axios.js.
 const RANKS = [
-  { min: 0, name: "Luyện Khí", color: "64748b" },
-  { min: 500, name: "Trúc Cơ", color: "6366f1" },
-  { min: 1200, name: "Kim Đan", color: "eab308" },
-  { min: 2100, name: "Nguyên Anh", color: "f97316" },
-  { min: 3100, name: "Bán Thần", color: "ef4444" },
-  { min: 4200, name: "Chân Thần", color: "a855f7" },
-  { min: 5400, name: "Bán Bộ Phi Thăng", color: "6366f1" },
-  { min: 6700, name: "Bán Tiên", color: "ec4899" },
-  { min: 7500, name: "Chân Tiên", color: "06b6d4" },
+  { min: 0, name: "Luyện Khí" },
+  { min: 500, name: "Trúc Cơ" },
+  { min: 1200, name: "Kim Đan" },
+  { min: 2100, name: "Nguyên Anh" },
+  { min: 3100, name: "Bán Thần" },
+  { min: 4200, name: "Chân Thần" },
+  { min: 5400, name: "Bán Bộ Phi Thăng" },
+  { min: 6700, name: "Bán Tiên" },
+  { min: 7500, name: "Chân Tiên" },
 ];
 
 function getRank(masteredWords) {
   return [...RANKS].reverse().find((rank) => masteredWords >= rank.min) || RANKS[0];
-}
-
-function renderBadge(masteredWords) {
-  const rank = getRank(masteredWords);
-  const name = encodeURIComponent(rank.name.replace(/ /g, "_"));
-  const width = Math.round((rank.name.length * 10 + 26) * 5 / 6);
-  return `<img src="https://img.shields.io/badge/${name}-${rank.color}?style=flat" alt="${rank.name}" width="${width}" height="30" />`;
 }
 
 function renderProgress(masteredWords) {
@@ -45,7 +38,7 @@ function replaceBadge(readme, masteredWords) {
   if (!pattern.test(readme)) {
     throw new Error("Missing VOCAB_RANK markers in README.");
   }
-  return readme.replace(pattern, `<!-- VOCAB_RANK:START -->\n${renderBadge(masteredWords)}\n\n${renderProgress(masteredWords)}\n<!-- VOCAB_RANK:END -->`);
+  return readme.replace(pattern, `<!-- VOCAB_RANK:START -->\n${renderProgress(masteredWords)}\n<!-- VOCAB_RANK:END -->`);
 }
 
 async function updateBadge() {
@@ -61,11 +54,11 @@ async function updateBadge() {
   const masteredWords = Number(match[1]);
   const nextReadme = replaceBadge(readme, masteredWords);
   if (nextReadme === readme) {
-    console.log("Rank badge is already up to date.");
+    console.log("Rank progress is already up to date.");
     return;
   }
   await fs.writeFile(readmePath, nextReadme);
-  console.log(`Updated rank badge: ${getRank(masteredWords).name} (${masteredWords} words).`);
+  console.log(`Updated rank progress: ${getRank(masteredWords).name} (${masteredWords} words).`);
 }
 
 if (require.main === module) {
@@ -75,4 +68,4 @@ if (require.main === module) {
   });
 }
 
-module.exports = { getRank, renderBadge, renderProgress, replaceBadge };
+module.exports = { getRank, renderProgress, replaceBadge };

@@ -36,8 +36,6 @@ Mastered: 568 words
 <!-- OPENQUIZ_STATS:END -->
 
 <!-- VOCAB_RANK:START -->
-<img src="https://img.shields.io/badge/Tr%C3%BAc_C%C6%A1-6366f1?style=flat" alt="Trúc Cơ" width="80" height="30" />
-
 ```text
 Trúc Cơ → Kim Đan  ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀  47.33%  (568 / 1200)
 ```
