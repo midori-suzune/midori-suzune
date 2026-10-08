@@ -6,7 +6,7 @@ const path = require("node:path");
 // Keep these thresholds in sync with widget_dicord/axios.js.
 const RANKS = [
   { min: 0, name: "Luyện Khí", color: "64748b" },
-  { min: 500, name: "Trúc Cơ", color: "22c55e" },
+  { min: 500, name: "Trúc Cơ", color: "10b981" },
   { min: 1200, name: "Kim Đan", color: "eab308" },
   { min: 2100, name: "Nguyên Anh", color: "f97316" },
   { min: 3100, name: "Bán Thần", color: "ef4444" },
@@ -22,24 +22,16 @@ function getRank(masteredWords) {
 
 function renderBadge(masteredWords) {
   const rank = getRank(masteredWords);
-  const labelWidth = 58;
-  const rankWidth = Math.max(100, rank.name.length * 9 + 24);
-  const width = labelWidth + rankWidth;
-  const rankCenter = labelWidth + rankWidth / 2;
+  const name = encodeURIComponent(rank.name.replace(/ /g, "_"));
+  return `<img src="https://img.shields.io/badge/${name}-${rank.color}?style=flat" alt="${rank.name}" />`;
+}
 
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="28" role="img" aria-label="Rank: ${rank.name}">
-  <title>Rank: ${rank.name} — ${masteredWords} mastered words</title>
-  <clipPath id="rounded"><rect width="${width}" height="28" rx="5"/></clipPath>
-  <g clip-path="url(#rounded)">
-    <rect width="${labelWidth}" height="28" fill="#334155"/>
-    <rect x="${labelWidth}" width="${rankWidth}" height="28" fill="#${rank.color}"/>
-  </g>
-  <g fill="#fff" text-anchor="middle" font-family="Verdana,DejaVu Sans,sans-serif" font-size="12">
-    <text x="${labelWidth / 2}" y="18">RANK</text>
-    <text x="${rankCenter}" y="18" font-weight="bold">${rank.name}</text>
-  </g>
-</svg>
-`;
+function replaceBadge(readme, masteredWords) {
+  const pattern = /<!-- VOCAB_RANK:START -->[\s\S]*?<!-- VOCAB_RANK:END -->/;
+  if (!pattern.test(readme)) {
+    throw new Error("Missing VOCAB_RANK markers in README.");
+  }
+  return readme.replace(pattern, `<!-- VOCAB_RANK:START -->\n${renderBadge(masteredWords)}\n<!-- VOCAB_RANK:END -->`);
 }
 
 async function updateBadge() {
@@ -53,18 +45,12 @@ async function updateBadge() {
   }
 
   const masteredWords = Number(match[1]);
-  const badgePath = path.join(root, "assets", "rank.svg");
-  const badge = renderBadge(masteredWords);
-  const previous = await fs.readFile(badgePath, "utf8").catch((error) => {
-    if (error.code === "ENOENT") return "";
-    throw error;
-  });
-  if (badge === previous) {
+  const nextReadme = replaceBadge(readme, masteredWords);
+  if (nextReadme === readme) {
     console.log("Rank badge is already up to date.");
     return;
   }
-  await fs.mkdir(path.dirname(badgePath), { recursive: true });
-  await fs.writeFile(badgePath, badge);
+  await fs.writeFile(readmePath, nextReadme);
   console.log(`Updated rank badge: ${getRank(masteredWords).name} (${masteredWords} words).`);
 }
 
@@ -75,4 +61,4 @@ if (require.main === module) {
   });
 }
 
-module.exports = { getRank, renderBadge };
+module.exports = { getRank, renderBadge, replaceBadge };
