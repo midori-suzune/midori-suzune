@@ -35,6 +35,8 @@
 Mastered: 568 words
 <!-- OPENQUIZ_STATS:END -->
 
+![Vocabulary Rank](assets/rank.svg)
+
 <!-- YOUPASS:START -->
 ```text
 📋 Recent Activity
