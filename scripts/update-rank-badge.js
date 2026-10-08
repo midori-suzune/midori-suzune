@@ -30,7 +30,7 @@ function renderProgress(masteredWords) {
   const percent = Math.max(0, Math.min(100, masteredWords / nextRank.min * 100));
   const filled = Math.round(percent / 100 * 30);
   const bar = "⣿".repeat(filled) + "⣀".repeat(30 - filled);
-  return ["```text", `${rank.name} → ${nextRank.name}  ${bar}  ${percent.toFixed(2)}%  (${masteredWords} / ${nextRank.min})`, "```"].join("\n");
+  return ["```text", `${rank.name} → ${nextRank.name}  ${bar}  ${percent.toFixed(2)}%  (${masteredWords} / ${nextRank.min} words)`, "```"].join("\n");
 }
 
 function replaceBadge(readme, masteredWords) {
