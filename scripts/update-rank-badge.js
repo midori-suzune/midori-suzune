@@ -6,7 +6,7 @@ const path = require("node:path");
 // Keep these thresholds in sync with widget_dicord/axios.js.
 const RANKS = [
   { min: 0, name: "Luyện Khí", color: "64748b" },
-  { min: 500, name: "Trúc Cơ", color: "10b981" },
+  { min: 500, name: "Trúc Cơ", color: "6366f1" },
   { min: 1200, name: "Kim Đan", color: "eab308" },
   { min: 2100, name: "Nguyên Anh", color: "f97316" },
   { min: 3100, name: "Bán Thần", color: "ef4444" },
@@ -23,7 +23,7 @@ function getRank(masteredWords) {
 function renderBadge(masteredWords) {
   const rank = getRank(masteredWords);
   const name = encodeURIComponent(rank.name.replace(/ /g, "_"));
-  return `<img src="https://img.shields.io/badge/${name}-${rank.color}?style=flat" alt="${rank.name}" />`;
+  return `<img src="https://img.shields.io/badge/${name}-${rank.color}?style=flat" alt="${rank.name}" height="26" />`;
 }
 
 function replaceBadge(readme, masteredWords) {

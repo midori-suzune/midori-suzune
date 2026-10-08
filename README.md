@@ -36,7 +36,7 @@ Mastered: 568 words
 <!-- OPENQUIZ_STATS:END -->
 
 <!-- VOCAB_RANK:START -->
-<img src="https://img.shields.io/badge/Tr%C3%BAc_C%C6%A1-10b981?style=flat" alt="Trúc Cơ" />
+<img src="https://img.shields.io/badge/Tr%C3%BAc_C%C6%A1-6366f1?style=flat" alt="Trúc Cơ" height="26" />
 <!-- VOCAB_RANK:END -->
 
 <!-- YOUPASS:START -->
