@@ -17,7 +17,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
 
-      - name: Checkout Daily Reading source
+      - name: Checkout English practice source
         uses: actions/checkout@v6
         with:
           repository: midori-suzune/Practice-English-Daily
@@ -30,10 +30,9 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Update IELTS progress stats
-        continue-on-error: true
+      - name: Update recent IELTS review activity
         env:
-          YOUPASS_TOKEN: ${{ secrets.YOUPASS_TOKEN }}
+          IELTS_REVIEW_PATH: practice-english-daily
         run: node scripts/update-ielts.js
 
       - name: Update Daily Reading

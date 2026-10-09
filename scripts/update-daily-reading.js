@@ -402,6 +402,7 @@ if (process.argv.includes("--help") || process.argv.includes("-h")) {
 }
 
 module.exports = {
+  countVocabEntries,
   countDailyLearningDays,
   countDailyLearningFiles,
   formatDailyLearning,
@@ -409,6 +410,9 @@ module.exports = {
   formatDate,
   formatHeading,
   loadDailyLearningData,
+  listMarkdownFiles,
+  gitCommitInfo,
+  dateFromTimestamp,
   normalizeEntry,
   normalizeEntries,
   replaceTaggedSection,

@@ -45,19 +45,19 @@ Trúc Cơ → Kim Đan  ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣀⣀⣀�
 ```text
 📋 Recent Activity
 
-Date        Skill          Title                                     
+Date        Skill          Title                                                   New Vocab
 ────────────────────────────────────────────────────────────────────────────────────────────────────
-26.10.7     Listening      [Simulation Q3] Harwick Weekend Market    
+26.10.10    Listening      Harwick Weekend Market                                    7 words
 
-26.10.6     Listening      [Simulation Q3] Tilbrook Cleaning Services
+26.10.7     Listening      Tilbrook Cleaning Services                               28 words
 
-26.9.27     Reading        Dark chocolate's health-giving benefits   
+26.10.3     Reading        Dark chocolate's health-giving benefits                  13 words
 
-26.9.27     Listening      [Simulation Q3] Winterbourne Wetlands     
+26.10.3     Listening      Winterbourne Wetlands                                    15 words
 
-26.9.18     Reading        Materials to take us beyond concrete      
+26.9.26     Reading        Materials to take us beyond concrete                     20 words
 
-26.9.11     Reading        Synaesthesia                              
+26.9.26     Listening      Volunteer work application                                5 words
 ```
 <!-- YOUPASS:END -->
 
