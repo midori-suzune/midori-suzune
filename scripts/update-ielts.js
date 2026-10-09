@@ -442,8 +442,6 @@ function normalizeActivity(skill, item) {
     date: formatDate(date),
     skill: skill.name,
     title: activityTitle(item),
-    percent: `${percentFor(item).toFixed(2)}%`,
-    time: activityDuration(item),
     timestamp: activityTimestamp(item),
   };
 }
@@ -462,22 +460,17 @@ function formatActivity(activityItems) {
     date: 9,
     skill: 12,
     title: 42,
-    score: 8,
-    time: Math.max("Time".length, ...rows.map((row) => row.time.length)),
   };
 
   const header = [
     fitEnd("Date", widths.date),
     fitEnd("Skill", widths.skill),
     fitEnd("Title", widths.title),
-    fitStart("Score", widths.score),
-    "",
-    fitStart("Time", widths.time),
   ].join("   ");
 
   lines.push("");
   lines.push(header);
-  lines.push("─".repeat(Math.max(TABLE_SEPARATOR_WIDTH, header.length)));
+  lines.push("─".repeat(header.length));
 
   rows.forEach((row, index) => {
     if (index > 0) {
@@ -489,9 +482,6 @@ function formatActivity(activityItems) {
         fitEnd(row.date, widths.date),
         fitEnd(row.skill, widths.skill),
         fitEnd(row.title, widths.title),
-        fitStart(row.percent, widths.score),
-        "",
-        fitStart(row.time, widths.time),
       ].join("   "),
     );
   });
