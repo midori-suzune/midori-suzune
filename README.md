@@ -65,13 +65,15 @@ Date        Skill          Title                                                
 ```text
 📰 Daily Reading  26 articles 🔥
 
-Date       Topic          Article                                                New Vocab
+Date       Topic          Article                                                  New Vocab
 ────────────────────────────────────────────────────────────────────────────────────────────────────
-26.10.8    Novel          Did You Think You Could Live Normally in a World_1      22 words
+26.10.8    Novel          Did You Think You Could Live Normally in a World_1        22 words
 
-26.9.3     Novel          transferred-to-another-world-and-became-a-teacher-C1     6 words
+26.9.3     Novel          transferred-to-another-world-and-became-a-teacher-C1       6 words
 
-26.8.27    General        Conservation Groups Sue Utah for Starving the Great…    38 words
+26.8.27    General        Conservation Groups Sue Utah for Starving the Great S…    38 words
+
+26.8.26    Soil           soil-as-a-public-good                                     29 words
 ```
 <!-- DAILY_READING:END -->
 
@@ -79,13 +81,21 @@ Date       Topic          Article                                               
 ```text
 📺 Daily Watching  51 videos 🔥
 
-Date       Topic          Title                                                  New Vocab
+Date       Topic          Title                                                    New Vocab
 ────────────────────────────────────────────────────────────────────────────────────────────────────
-26.10.7    Feeling        What is that unpleasant feeling on our skin             10 words
+26.10.7    Feeling        What is that unpleasant feeling on our skin               10 words
 
-26.10.7    Heartbreak      Why does heartbreak hurt so much?                       8 words
+26.10.7    Heartbreak      Why does heartbreak hurt so much?                         8 words
 
-26.10.3    Email           Rude emails                                             9 words
+26.10.3    Email           Rude emails                                               9 words
+
+26.10.3    Advertising     How advertisers make us spend money                      10 words
+
+26.9.26    Feelings        How do you feel when someone says 'no'?                   7 words
+
+26.9.26    Football        How do footballers cope with high-pressure scenarios?    17 words
+
+26.9.19    Children       Children in war zones                                      6 words
 ```
 <!-- DAILY_WATCHING:END -->
 

@@ -7,7 +7,7 @@ const path = require("node:path");
 const START_TAG = "<!-- DAILY_READING:START -->";
 const END_TAG = "<!-- DAILY_READING:END -->";
 const DEFAULT_DATA_PATH = "assets/daily-reading.json";
-const DEFAULT_LIMIT = 3;
+const DEFAULT_LIMIT = 4;
 const TABLE_SEPARATOR_WIDTH = 100;
 const TIME_ZONE = process.env.DAILY_READING_TIME_ZONE || "Asia/Ho_Chi_Minh";
 
@@ -19,7 +19,7 @@ function usage() {
     "  README_PATH            Path to README file. Defaults to README.md.",
     "  DAILY_READING_PATH     Path to JSON data, a markdown file, or a markdown directory.",
     "  DAILY_READING_FILE     Markdown filename to use when DAILY_READING_PATH is a directory.",
-    "  DAILY_READING_LIMIT    Number of rows to render. Defaults to 3.",
+    "  DAILY_READING_LIMIT    Number of recent activity days to render. Defaults to 4.",
     "  DAILY_READING_TIME_ZONE Time zone for git commit dates. Defaults to Asia/Ho_Chi_Minh.",
   ].join("\n");
 }
@@ -69,7 +69,7 @@ function dateFromTimestamp(timestamp) {
   return `${values.year}-${values.month}-${values.day}`;
 }
 
-function rowLimit() {
+function dayLimit() {
   const limit = Number(process.env.DAILY_READING_LIMIT || DEFAULT_LIMIT);
   return Number.isFinite(limit) && limit > 0 ? Math.floor(limit) : DEFAULT_LIMIT;
 }
@@ -87,7 +87,14 @@ function normalizeEntry(entry = {}) {
 
 function normalizeEntries(data) {
   const entries = Array.isArray(data) ? data : data?.items ?? [data];
-  return entries.slice(0, rowLimit()).map(normalizeEntry);
+  const normalized = entries.map(normalizeEntry);
+  const dateOrder = (date) => {
+    const match = date.match(/^(\d{2})\.(\d{1,2})\.(\d{1,2})$/);
+    return match ? Date.UTC(2000 + Number(match[1]), Number(match[2]) - 1, Number(match[3])) : 0;
+  };
+  normalized.sort((left, right) => dateOrder(right.date) - dateOrder(left.date));
+  const recentDates = new Set([...new Set(normalized.map((entry) => entry.date))].slice(0, dayLimit()));
+  return normalized.filter((entry) => recentDates.has(entry.date));
 }
 
 function titleFromMarkdownPath(filePath) {
@@ -293,7 +300,6 @@ async function loadDailyLearningData(sourcePath, fileName = process.env.DAILY_RE
 
   return Promise.all(
     ranked
-      .slice(0, rowLimit())
       .map(({ file }) => markdownEntry(file, sourcePath)),
   );
 }
@@ -315,7 +321,7 @@ function formatDailyLearning(data, heading = "📰 Daily Reading", titleHeader =
   const widths = {
     date: 9,
     topic: 13,
-    article: 52,
+    article: 54,
     vocab: 10,
   };
 
