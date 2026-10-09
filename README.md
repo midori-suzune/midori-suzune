@@ -95,50 +95,7 @@ Date       Topic          Title                                                 
 ```
 <!-- DAILY_WATCHING:END -->
 
-<h2 align="center"> 📺 Watching English 📺 </h2>
 
-<div align="center">
-
-<!-- BEGIN YOUTUBE-CARDS -->
-<a href="https://www.youtube.com/watch?v=1VQNMDSzWpE">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://ytcards.demolab.com/?id=1VQNMDSzWpE&title=What+is+that+unpleasant+feeling+on+our+skin+and+is+scratching+good+for+us%3F+%E2%8F%B2%EF%B8%8F+6+Minute+English&lang=en&timestamp=1790238151&background_color=%231f2335&title_color=%23e6edf3&stats_color=%23a6adc8&max_title_lines=2&width=250&border_radius=5&duration=362">
-    <img src="https://ytcards.demolab.com/?id=1VQNMDSzWpE&title=What+is+that+unpleasant+feeling+on+our+skin+and+is+scratching+good+for+us%3F+%E2%8F%B2%EF%B8%8F+6+Minute+English&lang=en&timestamp=1790238151&background_color=%23f6f8fa&title_color=%2324292f&stats_color=%2357606a&max_title_lines=2&width=250&border_radius=5&duration=362" alt="What is that unpleasant feeling on our skin and is scratching good for us? ⏲️ 6 Minute English" title="What is that unpleasant feeling on our skin and is scratching good for us? ⏲️ 6 Minute English">
-  </picture>
-</a>
-<a href="https://www.youtube.com/watch?v=-IVhkLjGDEA">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://ytcards.demolab.com/?id=-IVhkLjGDEA&title=%28Full+audiobook%29+If+Cats+Disappeared+from+the+World+-+Genki+Kawamura&lang=en&timestamp=1727115691&background_color=%231f2335&title_color=%23e6edf3&stats_color=%23a6adc8&max_title_lines=2&width=250&border_radius=5&duration=17376">
-    <img src="https://ytcards.demolab.com/?id=-IVhkLjGDEA&title=%28Full+audiobook%29+If+Cats+Disappeared+from+the+World+-+Genki+Kawamura&lang=en&timestamp=1727115691&background_color=%23f6f8fa&title_color=%2324292f&stats_color=%2357606a&max_title_lines=2&width=250&border_radius=5&duration=17376" alt="(Full audiobook) If Cats Disappeared from the World - Genki Kawamura" title="(Full audiobook) If Cats Disappeared from the World - Genki Kawamura">
-  </picture>
-</a>
-<a href="https://www.youtube.com/watch?v=vxoPApiNZBU">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://ytcards.demolab.com/?id=vxoPApiNZBU&title=Rude+emails+%E2%8F%B2%EF%B8%8F+6+Minute+English&lang=en&timestamp=1783008695&background_color=%231f2335&title_color=%23e6edf3&stats_color=%23a6adc8&max_title_lines=2&width=250&border_radius=5&duration=375">
-    <img src="https://ytcards.demolab.com/?id=vxoPApiNZBU&title=Rude+emails+%E2%8F%B2%EF%B8%8F+6+Minute+English&lang=en&timestamp=1783008695&background_color=%23f6f8fa&title_color=%2324292f&stats_color=%2357606a&max_title_lines=2&width=250&border_radius=5&duration=375" alt="Rude emails ⏲️ 6 Minute English" title="Rude emails ⏲️ 6 Minute English">
-  </picture>
-</a>
-<a href="https://www.youtube.com/watch?v=vAkmEj4BTAU">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://ytcards.demolab.com/?id=vAkmEj4BTAU&title=Loneliness+in+young+people+-+Ways+out+of+isolation+%7C+DW+Documentary&lang=en&timestamp=1779897612&background_color=%231f2335&title_color=%23e6edf3&stats_color=%23a6adc8&max_title_lines=2&width=250&border_radius=5&duration=3486">
-    <img src="https://ytcards.demolab.com/?id=vAkmEj4BTAU&title=Loneliness+in+young+people+-+Ways+out+of+isolation+%7C+DW+Documentary&lang=en&timestamp=1779897612&background_color=%23f6f8fa&title_color=%2324292f&stats_color=%2357606a&max_title_lines=2&width=250&border_radius=5&duration=3486" alt="Loneliness in young people - Ways out of isolation | DW Documentary" title="Loneliness in young people - Ways out of isolation | DW Documentary">
-  </picture>
-</a>
-<a href="https://www.youtube.com/watch?v=MSJMJxd1udk">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://ytcards.demolab.com/?id=MSJMJxd1udk&title=How+do+footballers+cope+with+high-pressure+scenarios%3F+%E2%8F%B2%EF%B8%8F+6+Minute+English&lang=en&timestamp=1784202271&background_color=%231f2335&title_color=%23e6edf3&stats_color=%23a6adc8&max_title_lines=2&width=250&border_radius=5&duration=371">
-    <img src="https://ytcards.demolab.com/?id=MSJMJxd1udk&title=How+do+footballers+cope+with+high-pressure+scenarios%3F+%E2%8F%B2%EF%B8%8F+6+Minute+English&lang=en&timestamp=1784202271&background_color=%23f6f8fa&title_color=%2324292f&stats_color=%2357606a&max_title_lines=2&width=250&border_radius=5&duration=371" alt="How do footballers cope with high-pressure scenarios? ⏲️ 6 Minute English" title="How do footballers cope with high-pressure scenarios? ⏲️ 6 Minute English">
-  </picture>
-</a>
-<a href="https://www.youtube.com/watch?v=2qgHaIh3D5I">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://ytcards.demolab.com/?id=2qgHaIh3D5I&title=Bacon%2C+Barbecue%2C+and+Religious+Bans%3A+The+10%2C000+Year+Saga+of+Pork&lang=en&timestamp=1765410868&background_color=%231f2335&title_color=%23e6edf3&stats_color=%23a6adc8&max_title_lines=2&width=250&border_radius=5&duration=5542">
-    <img src="https://ytcards.demolab.com/?id=2qgHaIh3D5I&title=Bacon%2C+Barbecue%2C+and+Religious+Bans%3A+The+10%2C000+Year+Saga+of+Pork&lang=en&timestamp=1765410868&background_color=%23f6f8fa&title_color=%2324292f&stats_color=%2357606a&max_title_lines=2&width=250&border_radius=5&duration=5542" alt="Bacon, Barbecue, and Religious Bans: The 10,000 Year Saga of Pork" title="Bacon, Barbecue, and Religious Bans: The 10,000 Year Saga of Pork">
-  </picture>
-</a>
-<!-- END YOUTUBE-CARDS -->
-
-</div>
 
 <h2 align="center"> 🏆 Coding Activity 🏆 </h2>
 
