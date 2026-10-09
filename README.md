@@ -54,10 +54,6 @@ Date        Skill          Title                                                
 26.10.3     Reading        Dark chocolate's health-giving benefits                  13 words
 
 26.10.3     Listening      Winterbourne Wetlands                                    15 words
-
-26.9.26     Reading        Materials to take us beyond concrete                     20 words
-
-26.9.26     Listening      Volunteer work application                                5 words
 ```
 <!-- YOUPASS:END -->
 
