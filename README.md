@@ -37,7 +37,7 @@ Mastered: 581 words
 
 <!-- VOCAB_RANK:START -->
 ```text
-Trúc Cơ → Kim Đan  ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀  47.33%  (568 / 1200 words)
+Trúc Cơ → Kim Đan  ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀  48.42%  (581 / 1200 words)
 ```
 <!-- VOCAB_RANK:END -->
 
@@ -45,19 +45,19 @@ Trúc Cơ → Kim Đan  ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣀⣀⣀⣀�
 ```text
 📋 Recent Activity
 
-Date        Skill          Title
+Date        Skill          Title                                     
 ────────────────────────────────────────────────────────────────────────────────────────────────────
-26.9.7      Reading        Carnivorous Plants
+26.10.7     Listening      [Simulation Q3] Harwick Weekend Market    
 
-26.9.7      Listening      Party Reservation (Shaw Restaurant)
+26.10.6     Listening      [Simulation Q3] Tilbrook Cleaning Services
 
-26.9.6      Listening      Beechen Festival
+26.9.27     Reading        Dark chocolate's health-giving benefits   
 
-26.9.5      Listening      New job in the pharmacy
+26.9.27     Listening      [Simulation Q3] Winterbourne Wetlands     
 
-26.9.2      Reading        The development of plastics
+26.9.18     Reading        Materials to take us beyond concrete      
 
-26.8.17     Reading        What Lucy Taught Us
+26.9.11     Reading        Synaesthesia                              
 ```
 <!-- YOUPASS:END -->
 
