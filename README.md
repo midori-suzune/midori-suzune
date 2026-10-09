@@ -46,7 +46,7 @@ Trúc Cơ → Kim Đan  ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣀⣀⣀⣀�
 📋 Recent Activity
 
 Date        Skill          Title
-─────────────────────────────────────────────────────────────────────
+────────────────────────────────────────────────────────────────────────────────────────────────────
 26.9.7      Reading        Carnivorous Plants
 
 26.9.7      Listening      Party Reservation (Shaw Restaurant)

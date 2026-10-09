@@ -470,7 +470,7 @@ function formatActivity(activityItems) {
 
   lines.push("");
   lines.push(header);
-  lines.push("─".repeat(header.length));
+  lines.push("─".repeat(Math.max(TABLE_SEPARATOR_WIDTH, header.length)));
 
   rows.forEach((row, index) => {
     if (index > 0) {
