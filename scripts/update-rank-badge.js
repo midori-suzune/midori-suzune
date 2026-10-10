@@ -7,7 +7,7 @@ const path = require("node:path");
 const RANKS = [
   { min: 0, name: "Luyện Khí" },
   { min: 500, name: "Trúc Cơ" },
-  { min: 1200, name: "Kim Đan" },
+  { min: 1200, name: "Kết Đan" },
   { min: 2100, name: "Nguyên Anh" },
   { min: 3100, name: "Bán Thần" },
   { min: 4200, name: "Chân Thần" },

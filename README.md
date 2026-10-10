@@ -37,7 +37,7 @@ Mastered: 581 words
 
 <!-- VOCAB_RANK:START -->
 ```text
-Trúc Cơ → Kim Đan  ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀  48.42%  (581 / 1200 words)
+Trúc Cơ → Kết Đan  ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀  48.42%  (581 / 1200 words)
 ```
 <!-- VOCAB_RANK:END -->
 
