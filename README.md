@@ -32,7 +32,7 @@
 
 
 <!-- OPENQUIZ_STATS:START -->
-Mastered: 581 words
+Mastered: 591 words
 <!-- OPENQUIZ_STATS:END -->
 
 <!-- VOCAB_RANK:START -->
