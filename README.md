@@ -37,7 +37,7 @@ Mastered: 642 words
 
 <!-- VOCAB_RANK:START -->
 ```text
-Trúc Cơ → Kết Đan  ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀  52.67%  (632 / 1200 words)
+Trúc Cơ → Kết Đan  ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀  53.50%  (642 / 1200 words)
 ```
 <!-- VOCAB_RANK:END -->
 
@@ -47,13 +47,13 @@ Trúc Cơ → Kết Đan  ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣀⣀
 
 Date        Skill          Title                                                   New Vocab
 ────────────────────────────────────────────────────────────────────────────────────────────────────
+26.10.11    Reading        Sydney Opera House                                       32 words
+
 26.10.10    Listening      Harwick Weekend Market                                   33 words
 
 26.10.7     Listening      Tilbrook Cleaning Services                               28 words
 
 26.10.3     Reading        Dark chocolate's health-giving benefits                  13 words
-
-26.10.3     Listening      Winterbourne Wetlands                                    15 words
 ```
 <!-- YOUPASS:END -->
 
@@ -75,10 +75,12 @@ Date       Topic          Article                                               
 
 <!-- DAILY_WATCHING:START -->
 ```text
-📺 Daily Watching  51 videos 🔥
+📺 Daily Watching  52 videos 🔥
 
 Date       Topic          Title                                                    New Vocab
 ────────────────────────────────────────────────────────────────────────────────────────────────────
+26.10.11   Poetry         The power of poetry                                       10 words
+
 26.10.7    Feeling        What is that unpleasant feeling on our skin               10 words
 
 26.10.7    Heartbreak      Why does heartbreak hurt so much?                         8 words
@@ -90,8 +92,6 @@ Date       Topic          Title                                                 
 26.9.26    Feelings        How do you feel when someone says 'no'?                   7 words
 
 26.9.26    Football        How do footballers cope with high-pressure scenarios?    17 words
-
-26.9.19    Children       Children in war zones                                      6 words
 ```
 <!-- DAILY_WATCHING:END -->
 
