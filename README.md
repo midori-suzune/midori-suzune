@@ -100,6 +100,9 @@ Date       Topic          Title                                                 
 <h2 align="center"> 🎬 Recently Watched 🎬 </h2>
 
 <!--ANIME_START-->
+<p align="center">
+<a href="https://anilist.co/anime/194393"><img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx194393-0H9yYABu6y0i.jpg" width="110" title="Aishiteru Game wo Owarasetai - tập 2" alt="Aishiteru Game wo Owarasetai"></a>
+</p>
 <!--ANIME_END-->
 
 <h2 align="center"> 🏆 Coding Activity 🏆 </h2>

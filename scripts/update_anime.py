@@ -3,6 +3,7 @@ import json
 import os
 from pathlib import Path
 import re
+import urllib.error
 import urllib.request
 
 USER = os.environ.get("ANILIST_USER", "Suzune889")
@@ -27,10 +28,21 @@ def fetch_items():
     request = urllib.request.Request(
         "https://graphql.anilist.co",
         data=json.dumps({"query": QUERY, "variables": {"name": USER}}).encode(),
-        headers={"Content-Type": "application/json", "Accept": "application/json"},
+        headers={
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+            "User-Agent": (
+                "Suzune-Profile-Anime/1.0 "
+                "(+https://github.com/midori-suzune/midori-suzune)"
+            ),
+        },
     )
-    with urllib.request.urlopen(request, timeout=30) as response:
-        payload = json.load(response)
+    try:
+        with urllib.request.urlopen(request, timeout=30) as response:
+            payload = json.load(response)
+    except urllib.error.HTTPError as error:
+        detail = error.read(2000).decode("utf-8", errors="replace")
+        raise RuntimeError(f"AniList HTTP {error.code}: {detail}") from error
     if payload.get("errors"):
         raise RuntimeError("AniList API error: " + json.dumps(payload["errors"]))
     items = payload["data"]["Page"]["mediaList"]
