@@ -19,10 +19,9 @@ query ($name: String) {
     mediaList(userName: $name, type: ANIME, sort: UPDATED_TIME_DESC) {
       media {
         id
-        bannerImage
         title { english romaji }
         siteUrl
-        coverImage { large }
+        coverImage { extraLarge }
       }
     }
   }
@@ -86,22 +85,28 @@ def display_title(media):
 
 def create_card(item):
     media = item["media"]
-    image_url = media.get("bannerImage") or media["coverImage"]["large"]
-    request = urllib.request.Request(image_url, headers={"User-Agent": USER_AGENT})
+    request = urllib.request.Request(
+        media["coverImage"]["extraLarge"], headers={"User-Agent": USER_AGENT}
+    )
     with urllib.request.urlopen(request, timeout=30) as response:
-        source = Image.open(BytesIO(response.read())).convert("RGB")
+        source = Image.open(BytesIO(response.read())).convert("RGBA")
     # Render at twice the display size so text stays sharp on dense screens.
-    card = Image.new("RGB", (500, 380), "#0d1117")
-    thumbnail = ImageOps.fit(source, (500, 280), method=Image.Resampling.LANCZOS)
-    mask = Image.new("L", thumbnail.size, 0)
-    ImageDraw.Draw(mask).rounded_rectangle((0, 0, 499, 279), radius=10, fill=255)
-    card.paste(thumbnail, (0, 0), mask)
+    card = ImageOps.fit(source, (300, 420), method=Image.Resampling.LANCZOS)
+    font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 24)
+    lines = title_lines(display_title(media), ImageDraw.Draw(card), font, 252)
+    overlay_height = 28 + len(lines) * 32
+    overlay_top = 420 - overlay_height
+    overlay = Image.new("RGBA", card.size, (0, 0, 0, 0))
+    ImageDraw.Draw(overlay).rectangle(
+        (0, overlay_top, 300, 420), fill=(13, 17, 23, 195)
+    )
+    card = Image.alpha_composite(card, overlay)
     draw = ImageDraw.Draw(card)
-    font_root = Path("/usr/share/fonts/truetype/dejavu")
-    title_font = ImageFont.truetype(str(font_root / "DejaVuSans-Bold.ttf"), 26)
-    title = display_title(media)
-    for index, line in enumerate(title_lines(title, draw, title_font, 464)):
-        draw.text((18, 302 + index * 36), line, font=title_font, fill="#e6edf3")
+    for index, line in enumerate(lines):
+        draw.text((24, overlay_top + 12 + index * 32), line, font=font, fill="#e6edf3")
+    mask = Image.new("L", card.size, 0)
+    ImageDraw.Draw(mask).rounded_rectangle((0, 0, 299, 419), radius=8, fill=255)
+    card.putalpha(mask)
     output = BytesIO()
     card.save(output, format="PNG", optimize=True)
     return output.getvalue()
@@ -116,7 +121,7 @@ def render_block(items):
         files[name] = create_card(item)
         title = html.escape(display_title(media), quote=True)
         url = html.escape(media["siteUrl"], quote=True)
-        cards.append(f'<a href="{url}"><img src="assets/anime/{name}" width="250" alt="{title}"></a>')
+        cards.append(f'<a href="{url}"><img src="assets/anime/{name}" width="150" alt="{title}"></a>')
     rows = ["\n".join(cards[index:index + 3]) for index in range(0, len(cards), 3)]
     content = "\n<br />\n".join(rows) if rows else "No anime activity yet."
     block = '<!--ANIME_START-->\n<p align="center">\n' + content + '\n</p>\n<!--ANIME_END-->'

@@ -95,7 +95,7 @@ Date       Topic          Title                                                 
 
 <!--ANIME_START-->
 <p align="center">
-<a href="https://anilist.co/anime/194393"><img src="assets/anime/194393.png" width="250" alt="I Want to End this Love Game"></a>
+<a href="https://anilist.co/anime/194393"><img src="assets/anime/194393.png" width="150" alt="I Want to End this Love Game"></a>
 </p>
 <!--ANIME_END-->
 
