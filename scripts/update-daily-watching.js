@@ -17,11 +17,10 @@ const DEFAULT_DATA_PATH = "assets/daily-watching.json";
 function formatDailyWatching(data, videoCount) {
   const seen = new Set();
   const entries = normalizeEntries(data).filter((entry) => {
-    const title = entry.article.normalize("NFKC").trim().replace(/\s+/g, " ").toLowerCase();
-    if (seen.has(title)) {
+    if (seen.has(entry.date)) {
       return false;
     }
-    seen.add(title);
+    seen.add(entry.date);
     return true;
   });
   return formatDailyLearning(entries, "📺 Daily Watching", "Title", videoCount, "videos");

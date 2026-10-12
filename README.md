@@ -83,15 +83,9 @@ Date       Topic          Title                                                 
 
 26.10.7    Feeling        What is that unpleasant feeling on our skin               10 words
 
-26.10.7    Heartbreak      Why does heartbreak hurt so much?                         8 words
-
 26.10.3    Email           Rude emails                                               9 words
 
-26.10.3    Advertising     How advertisers make us spend money                      10 words
-
 26.9.26    Feelings        How do you feel when someone says 'no'?                   7 words
-
-26.9.26    Football        How do footballers cope with high-pressure scenarios?    17 words
 ```
 <!-- DAILY_WATCHING:END -->
 
