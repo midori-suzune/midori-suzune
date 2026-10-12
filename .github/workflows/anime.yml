@@ -2,7 +2,8 @@ name: Update anime list
 
 on:
   schedule:
-    - cron: "0 */6 * * *"
+    # 15:00 UTC = 22:00 Vietnam time
+    - cron: "0 15 * * *"
   workflow_dispatch:
 
 permissions:
