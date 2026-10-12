@@ -97,6 +97,11 @@ Date       Topic          Title                                                 
 
 
 
+<h2 align="center"> 🎬 Recently Watched 🎬 </h2>
+
+<!--ANIME_START-->
+<!--ANIME_END-->
+
 <h2 align="center"> 🏆 Coding Activity 🏆 </h2>
 
 <!--START_SECTION:waka-->
