@@ -101,7 +101,7 @@ Date       Topic          Title                                                 
 
 <!--ANIME_START-->
 <p align="center">
-<a href="https://anilist.co/anime/194393"><img src="https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx194393-0H9yYABu6y0i.jpg" width="110" title="Aishiteru Game wo Owarasetai - tập 2" alt="Aishiteru Game wo Owarasetai"></a>
+<a href="https://anilist.co/anime/194393"><img src="assets/anime/194393.png" width="250" alt="Aishiteru Game wo Owarasetai"></a>
 </p>
 <!--ANIME_END-->
 

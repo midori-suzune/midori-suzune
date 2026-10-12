@@ -21,6 +21,17 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install card rendering dependencies
+        run: |
+          python3 -m pip install "Pillow==10.2.0"
+          sudo apt-get update
+          sudo apt-get install -y fonts-dejavu-core
+
       - name: Update recently watched anime
         run: python3 scripts/update_anime.py
         env:
@@ -31,7 +42,7 @@ jobs:
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md
+          git add README.md assets/anime
           if git diff --cached --quiet; then
             echo "No anime changes."
             exit 0
