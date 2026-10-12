@@ -71,12 +71,12 @@ def title_lines(title, draw, font, width):
         lines.append(current)
     visible = lines[:2]
     if len(lines) > 2:
-        visible[-1] += "…"
+        visible[-1] += "..."
     for index, line in enumerate(visible):
         if draw.textlength(line, font=font) > width:
-            while line and draw.textlength(line + "…", font=font) > width:
+            while line and draw.textlength(line + "...", font=font) > width:
                 line = line[:-1]
-            visible[index] = line + "…"
+            visible[index] = line + "..."
     return visible
 
 

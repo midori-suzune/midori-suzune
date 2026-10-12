@@ -97,7 +97,7 @@ Date       Topic          Title                                                 
 
 
 
-<h2 align="center"> 🎬 Recently Watched 🎬 </h2>
+<h2 align="center"> 🎬 Anime Watched 🎬 </h2>
 
 <!--ANIME_START-->
 <p align="center">
