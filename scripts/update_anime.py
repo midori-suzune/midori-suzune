@@ -17,12 +17,10 @@ QUERY = """
 query ($name: String) {
   Page(perPage: 6) {
     mediaList(userName: $name, type: ANIME, sort: UPDATED_TIME_DESC) {
-      progress
       media {
         id
-        episodes
         bannerImage
-        title { romaji }
+        title { english romaji }
         siteUrl
         coverImage { large }
       }
@@ -82,6 +80,10 @@ def title_lines(title, draw, font, width):
     return visible
 
 
+def display_title(media):
+    return media["title"].get("english") or media["title"]["romaji"]
+
+
 def create_card(item):
     media = item["media"]
     image_url = media.get("bannerImage") or media["coverImage"]["large"]
@@ -89,7 +91,7 @@ def create_card(item):
     with urllib.request.urlopen(request, timeout=30) as response:
         source = Image.open(BytesIO(response.read())).convert("RGB")
     # Render at twice the display size so text stays sharp on dense screens.
-    card = Image.new("RGB", (500, 440), "#0d1117")
+    card = Image.new("RGB", (500, 380), "#0d1117")
     thumbnail = ImageOps.fit(source, (500, 280), method=Image.Resampling.LANCZOS)
     mask = Image.new("L", thumbnail.size, 0)
     ImageDraw.Draw(mask).rounded_rectangle((0, 0, 499, 279), radius=10, fill=255)
@@ -97,14 +99,9 @@ def create_card(item):
     draw = ImageDraw.Draw(card)
     font_root = Path("/usr/share/fonts/truetype/dejavu")
     title_font = ImageFont.truetype(str(font_root / "DejaVuSans-Bold.ttf"), 26)
-    detail_font = ImageFont.truetype(str(font_root / "DejaVuSans.ttf"), 23)
-    title = media["title"]["romaji"]
+    title = display_title(media)
     for index, line in enumerate(title_lines(title, draw, title_font, 464)):
         draw.text((18, 302 + index * 36), line, font=title_font, fill="#e6edf3")
-    progress = int(item["progress"])
-    total = media.get("episodes")
-    detail = f"{progress} / {total} episodes watched" if total else f"{progress} episodes watched"
-    draw.text((18, 394), detail, font=detail_font, fill="#a6adc8")
     output = BytesIO()
     card.save(output, format="PNG", optimize=True)
     return output.getvalue()
@@ -117,7 +114,7 @@ def render_block(items):
         media = item["media"]
         name = f"{int(media['id'])}.png"
         files[name] = create_card(item)
-        title = html.escape(media["title"]["romaji"], quote=True)
+        title = html.escape(display_title(media), quote=True)
         url = html.escape(media["siteUrl"], quote=True)
         cards.append(f'<a href="{url}"><img src="assets/anime/{name}" width="250" alt="{title}"></a>')
     rows = ["\n".join(cards[index:index + 3]) for index in range(0, len(cards), 3)]
