@@ -1,4 +1,4 @@
-name: Update anime list
+name: Update anime and manga list
 
 on:
   schedule:
@@ -33,7 +33,7 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y fonts-dejavu-core
 
-      - name: Update recently watched anime
+      - name: Update recently watched anime and manga
         run: python3 scripts/update_anime.py
         env:
           ANILIST_USER: Suzune889
@@ -43,11 +43,11 @@ jobs:
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md assets/anime
+          git add README.md assets/anime assets/manga
           if git diff --cached --quiet; then
             echo "No anime changes."
             exit 0
           fi
-          git commit -m "chore: update anime list"
+          git commit -m "chore: update anime and manga list"
           git pull --rebase
           git push
