@@ -1,7 +1,6 @@
 import html
 import json
 from io import BytesIO
-import math
 import os
 from pathlib import Path
 import re
@@ -96,47 +95,11 @@ def display_title(media):
     return media["title"].get("english") or media["title"]["romaji"]
 
 
-def draw_progress_border(card, progress, total, unit):
+def draw_progress_badge(card, progress, total, unit):
     if not isinstance(progress, int):
         return
 
     draw = ImageDraw.Draw(card)
-    if isinstance(total, int) and total > 0:
-        # Trace the rounded border clockwise from the top-left corner.
-        left, top, right, bottom, radius = 6, 6, 293, 413, 12
-        points = [(left + radius, top), (right - radius, top)]
-        corners = (
-            (right - radius, top + radius, -90, 0),
-            (right - radius, bottom - radius, 0, 90),
-            (left + radius, bottom - radius, 90, 180),
-            (left + radius, top + radius, 180, 270),
-        )
-        for cx, cy, start, end in corners:
-            for angle in range(start, end + 1, 3):
-                radians = math.radians(angle)
-                points.append((cx + radius * math.cos(radians), cy + radius * math.sin(radians)))
-            if start == -90:
-                points.append((right, bottom - radius))
-            elif start == 0:
-                points.append((left + radius, bottom))
-            elif start == 90:
-                points.append((left, top + radius))
-
-        draw.line(points, fill="#56606b", width=8, joint="curve")
-        remaining = min(max(progress / total, 0), 1) * sum(
-            math.dist(a, b) for a, b in zip(points, points[1:])
-        )
-        completed = [points[0]]
-        for start, end in zip(points, points[1:]):
-            length = math.dist(start, end)
-            if remaining < length:
-                completed.append(tuple(a + (b - a) * remaining / length for a, b in zip(start, end)))
-                break
-            completed.append(end)
-            remaining -= length
-        if len(completed) > 1:
-            draw.line(completed, fill="#ff9b54", width=8, joint="curve")
-
     font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", 20)
     label = f"{progress}/{total}" if isinstance(total, int) and total > 0 else f"{progress} {unit}"
     text_width = draw.textlength(label, font=font)
@@ -165,7 +128,7 @@ def create_card(item, kind):
     draw = ImageDraw.Draw(card)
     for index, line in enumerate(lines):
         draw.text((24, overlay_top + 12 + index * 32), line, font=font, fill="#e6edf3")
-    draw_progress_border(
+    draw_progress_badge(
         card, item.get("progress"), media.get("episodes" if kind == "anime" else "chapters"),
         "ep" if kind == "anime" else "ch",
     )
@@ -187,7 +150,7 @@ def render_block(anime, manga):
             files[f"{kind}/{name}"] = create_card(item, kind)
             title = html.escape(display_title(media), quote=True)
             url = html.escape(media["siteUrl"], quote=True)
-            cards.append(f'<a href="{url}"><img src="assets/{kind}/{name}" width="150" alt="{kind.title()}: {title}"></a>')
+            cards.append(f'<a href="{url}"><img src="assets/{kind}/{name}" width="170" alt="{kind.title()}: {title}"></a>')
     rows = ["\n".join(cards[index:index + 3]) for index in range(0, len(cards), 3)]
     content = "\n<br />\n".join(rows) if rows else "No anime or manga activity yet."
     block = '<!--ANIME_START-->\n<p align="center">\n' + content + '\n</p>\n<!--ANIME_END-->'
