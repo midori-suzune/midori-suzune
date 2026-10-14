@@ -59,11 +59,13 @@ Date        Skill          Title                                                
 
 <!-- DAILY_READING:START -->
 ```text
-📰 Daily Reading  26 articles 🔥
+📰 Daily Reading  27 articles 🔥
 
 Date       Topic          Article                                                  New Vocab
 ────────────────────────────────────────────────────────────────────────────────────────────────────
-26.10.8    Novel          Did You Think You Could Live Normally in a World_1        22 words
+26.10.14   Manga          The Villainess Who Came to Marry-C2                       17 words
+
+26.10.14   Novel          Did You Think You Could Live Normally in a World_1        41 words
 
 26.9.3     Novel          transferred-to-another-world-and-became-a-teacher-C1       6 words
 
