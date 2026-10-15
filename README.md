@@ -37,7 +37,7 @@ Mastered: 682 words
 
 <!-- VOCAB_RANK:START -->
 ```text
-Trúc Cơ → Kết Đan  ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀  53.42%  (641 / 1200 words)
+Trúc Cơ → Kết Đan  ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀  56.83%  (682 / 1200 words)
 ```
 <!-- VOCAB_RANK:END -->
 
@@ -59,10 +59,12 @@ Date        Skill          Title                                                
 
 <!-- DAILY_READING:START -->
 ```text
-📰 Daily Reading  27 articles 🔥
+📰 Daily Reading  28 articles 🔥
 
 Date       Topic          Article                                                  New Vocab
 ────────────────────────────────────────────────────────────────────────────────────────────────────
+26.10.16   Manga          The Villainess Who Came to Marry-C4                       22 words
+
 26.10.14   Manga          The Villainess Who Came to Marry-C2                       17 words
 
 26.10.14   Novel          Did You Think You Could Live Normally in a World_1        41 words
@@ -70,8 +72,6 @@ Date       Topic          Article                                               
 26.9.3     Novel          transferred-to-another-world-and-became-a-teacher-C1       6 words
 
 26.8.27    General        Conservation Groups Sue Utah for Starving the Great S…    38 words
-
-26.8.26    Soil           soil-as-a-public-good                                     29 words
 ```
 <!-- DAILY_READING:END -->
 
