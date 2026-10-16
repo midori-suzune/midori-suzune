@@ -37,7 +37,9 @@ Mastered: 716 words
 ```text
 ⏱️ OpenQuiz Study Time
 Today        0 mins
+
 This Week    0 mins
+
 Total        0 mins
 
 📅 OpenQuiz Activity
