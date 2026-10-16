@@ -116,7 +116,7 @@ Date       Topic          Title                                                 
 <h2 align="center"> 🏆 Coding Activity 🏆 </h2>
 
 <details>
-<summary>📊 View Weekly Coding Stats</summary>
+<summary> View Weekly Coding Stats</summary>
 
 <!--START_SECTION:waka-->
 ![Code Time](http://img.shields.io/badge/Code%20Time-1%2C760%20hrs%2038%20mins-blue?style=flat) ![AI Code Time](http://img.shields.io/badge/AI%20Code%20Time-540%20hrs%2045%20mins-blue?style=flat)
