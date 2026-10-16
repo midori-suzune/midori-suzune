@@ -40,14 +40,8 @@ Today        0 mins
 This Week    0 mins
 Total        0 mins
 
-📅 Repetition Forecast · Next 7 Days
-26.10.16  Friday      ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿  59 words
-26.10.17  Saturday    ⣿⣿⣿⣿⣿⣿⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀  18 words
-26.10.18  Sunday      ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣀⣀⣀  51 words
-26.10.19  Monday      ⣿⣿⣿⣿⣿⣿⣿⣿⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀  24 words
-26.10.20  Tuesday     ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣀⣀⣀⣀⣀⣀⣀  38 words
-26.10.21  Wednesday   ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣀⣀  53 words
-26.10.22  Thursday    ⣿⣿⣿⣿⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀  11 words
+📅 OpenQuiz Activity
+26.10.16   Friday      0 mins          —
 ```
 <!-- OPENQUIZ_STATS:END -->
 
