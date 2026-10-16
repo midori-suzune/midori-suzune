@@ -70,8 +70,6 @@ Date        Skill          Title                                                
 26.10.10    Listening      Harwick Weekend Market                                   33 words
 
 26.10.7     Listening      Tilbrook Cleaning Services                               28 words
-
-26.10.3     Reading        Dark chocolate's health-giving benefits                  13 words
 ```
 <!-- YOUPASS:END -->
 
@@ -85,11 +83,7 @@ Date       Topic          Article                                               
 
 26.10.14   Manga          The Villainess Who Came to Marry-C2                       17 words
 
-26.10.14   Novel          Did You Think You Could Live Normally in a World_1        41 words
-
 26.9.3     Novel          transferred-to-another-world-and-became-a-teacher-C1       6 words
-
-26.8.27    General        Conservation Groups Sue Utah for Starving the Great S…    38 words
 ```
 <!-- DAILY_READING:END -->
 
@@ -104,8 +98,6 @@ Date       Topic          Title                                                 
 26.10.7    Feeling        What is that unpleasant feeling on our skin               10 words
 
 26.10.3    Email           Rude emails                                               9 words
-
-26.9.26    Feelings        How do you feel when someone says 'no'?                   7 words
 ```
 <!-- DAILY_WATCHING:END -->
 
@@ -123,10 +115,11 @@ Date       Topic          Title                                                 
 
 <h2 align="center"> 🏆 Coding Activity 🏆 </h2>
 
-<!--START_SECTION:waka-->
-![Code Time](http://img.shields.io/badge/Code%20Time-1%2C760%20hrs%2038%20mins-blue?style=flat)
+<details>
+<summary>📊 View Weekly Coding Stats</summary>
 
-![AI Code Time](http://img.shields.io/badge/AI%20Code%20Time-540%20hrs%2045%20mins-blue?style=flat)
+<!--START_SECTION:waka-->
+![Code Time](http://img.shields.io/badge/Code%20Time-1%2C760%20hrs%2038%20mins-blue?style=flat) ![AI Code Time](http://img.shields.io/badge/AI%20Code%20Time-540%20hrs%2045%20mins-blue?style=flat)
 
 📊 **This Week I Spent My Time On** 
 
@@ -151,3 +144,5 @@ Linux                    45 hrs 1 min        ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿�
 
 
 <!--END_SECTION:waka-->
+
+</details>

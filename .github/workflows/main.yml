@@ -5,6 +5,9 @@ on:
     - cron: '10 17 * * *'
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   update-readme:
     runs-on: ubuntu-latest
@@ -28,4 +31,21 @@ jobs:
           SHOW_DAYS_OF_WEEK: "False"
           SHOW_COMMIT: "False"
           SHOW_LANGUAGE_PER_REPO: "False"
-          
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+
+      - name: Keep WakaTime badges on one line
+        run: node scripts/format-waka-badges.js
+
+      - name: Commit badge formatting if needed
+        run: |
+          if git diff --quiet -- README.md; then
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "Keep WakaTime badges aligned [skip ci]"
+          git push origin HEAD:${{ github.ref_name }}

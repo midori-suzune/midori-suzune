@@ -20,8 +20,8 @@ const SOURCES = [
 const SUPPORT_FILES = new Set(["Revision Note.md", "IELTS_READING_ANALYSIS_PATTERN.md"]);
 
 function activityLimit() {
-  const limit = Number(process.env.IELTS_ACTIVITY_LIMIT || 4);
-  return Number.isFinite(limit) && limit >= 1 ? Math.floor(limit) : 4;
+  const limit = Number(process.env.IELTS_ACTIVITY_LIMIT || 3);
+  return Number.isFinite(limit) && limit >= 1 ? Math.floor(limit) : 3;
 }
 
 async function loadReviewActivity(sourceRoot) {
@@ -42,8 +42,14 @@ async function loadReviewActivity(sourceRoot) {
       };
     }));
   }));
+  const seen = new Set();
   return groups.flat()
     .sort((left, right) => right.timestamp - left.timestamp || left.file.localeCompare(right.file))
+    .filter((item) => {
+      if (seen.has(item.date)) return false;
+      seen.add(item.date);
+      return true;
+    })
     .slice(0, activityLimit());
 }
 
@@ -91,7 +97,7 @@ async function updateReadme() {
 }
 
 if (process.argv.includes("--help") || process.argv.includes("-h")) {
-  console.log("Usage: node scripts/update-ielts.js\n\nIELTS_REVIEW_PATH: Practice-English-Daily repository path (default: practice-english-daily).\nIELTS_ACTIVITY_LIMIT: Number of recent rows (default: 4).\nREADME_PATH: README file path (default: README.md).\nDAILY_READING_TIME_ZONE: Time zone for commit dates (default: Asia/Ho_Chi_Minh).");
+  console.log("Usage: node scripts/update-ielts.js\n\nIELTS_REVIEW_PATH: Practice-English-Daily repository path (default: practice-english-daily).\nIELTS_ACTIVITY_LIMIT: Number of recent days (default: 3).\nREADME_PATH: README file path (default: README.md).\nDAILY_READING_TIME_ZONE: Time zone for commit dates (default: Asia/Ho_Chi_Minh).");
 } else if (require.main === module) {
   updateReadme().catch((error) => {
     console.error(error.message);

@@ -7,7 +7,7 @@ const path = require("node:path");
 const START_TAG = "<!-- DAILY_READING:START -->";
 const END_TAG = "<!-- DAILY_READING:END -->";
 const DEFAULT_DATA_PATH = "assets/daily-reading.json";
-const DEFAULT_LIMIT = 4;
+const DEFAULT_LIMIT = 3;
 const TABLE_SEPARATOR_WIDTH = 100;
 const TIME_ZONE = process.env.DAILY_READING_TIME_ZONE || "Asia/Ho_Chi_Minh";
 
@@ -19,7 +19,7 @@ function usage() {
     "  README_PATH            Path to README file. Defaults to README.md.",
     "  DAILY_READING_PATH     Path to JSON data, a markdown file, or a markdown directory.",
     "  DAILY_READING_FILE     Markdown filename to use when DAILY_READING_PATH is a directory.",
-    "  DAILY_READING_LIMIT    Number of recent activity days to render. Defaults to 4.",
+    "  DAILY_READING_LIMIT    Number of recent activity days to render. Defaults to 3.",
     "  DAILY_READING_TIME_ZONE Time zone for git commit dates. Defaults to Asia/Ho_Chi_Minh.",
   ].join("\n");
 }
@@ -355,7 +355,15 @@ function formatDailyLearning(data, heading = "📰 Daily Reading", titleHeader =
 }
 
 function formatDailyReading(data, count) {
-  return formatDailyLearning(data, "📰 Daily Reading", "Article", count, "articles");
+  const seen = new Set();
+  const entries = normalizeEntries(data).filter((entry) => {
+    if (seen.has(entry.date)) {
+      return false;
+    }
+    seen.add(entry.date);
+    return true;
+  });
+  return formatDailyLearning(entries, "📰 Daily Reading", "Article", count, "articles");
 }
 
 function replaceTaggedSection(readme, content, startTag = START_TAG, endTag = END_TAG) {
