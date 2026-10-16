@@ -34,8 +34,15 @@
 <!-- OPENQUIZ_STATS:START -->
 Mastered: 716 words
 
+<!-- VOCAB_RANK:START -->
+```text
+Trúc Cơ → Kết Đan  ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀  59.67%  (716 / 1200 words)
+```
+<!-- VOCAB_RANK:END -->
+
 ```text
 ⏱️ OpenQuiz Study Time
+
 Today        0 mins
 
 This Week    0 mins
@@ -51,12 +58,6 @@ Date        Day          Time            Words
 26.10.16    Friday       0 mins          59 words
 ```
 <!-- OPENQUIZ_STATS:END -->
-
-<!-- VOCAB_RANK:START -->
-```text
-Trúc Cơ → Kết Đan  ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀  57.50%  (690 / 1200 words)
-```
-<!-- VOCAB_RANK:END -->
 
 <!-- YOUPASS:START -->
 ```text
