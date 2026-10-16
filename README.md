@@ -32,7 +32,7 @@
 
 
 <!-- OPENQUIZ_STATS:START -->
-Mastered: 690 words
+Mastered: 716 words
 
 ```text
 ⏱️ OpenQuiz Study Time
@@ -41,7 +41,7 @@ This Week    0 mins
 Total        0 mins
 
 📅 OpenQuiz Activity
-26.10.16   Friday      0 mins          50 words
+26.10.16   Friday      0 mins          59 words
 ```
 <!-- OPENQUIZ_STATS:END -->
 
