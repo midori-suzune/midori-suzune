@@ -41,8 +41,13 @@ Today        0 mins
 This Week    0 mins
 
 Total        0 mins
+```
 
+```text
 📅 OpenQuiz Activity
+
+Date        Day          Time            Words
+─────────────────────────────────────────────────
 26.10.16    Friday       0 mins          59 words
 ```
 <!-- OPENQUIZ_STATS:END -->
