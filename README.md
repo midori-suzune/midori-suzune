@@ -10,12 +10,12 @@
 
 
 <div align="center">
-    <img src="https://skillicons.dev/icons?i=java,html,css,javascript,react,typescript" />
+    <img src="https://skillicons.dev/icons?i=java,html,css,javascript,react,typescript,spring,github,idea,vscode,mysql" />
     <br>
-    <img src="https://skillicons.dev/icons?i=spring,github,idea,vscode,mysql,postman,docker,nginx,linux,jenkins,grafana,prometheus" />
-    <br>
+    <img src="https://skillicons.dev/icons?i=postman,docker,nginx,linux,jenkins,grafana,prometheus" />
     <img src="https://cdn.simpleicons.org/swagger/85EA2D" height="48" />
     <img src="https://cdn.simpleicons.org/dbeaver/cfcfcf" height="48" />
+    <img src="https://www.lazyvim.org/img/icon.svg" height="48" alt="LazyVim" />
 </div>
 <h2 align="center">⚡ My Progress ⚡</h2>
 
