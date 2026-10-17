@@ -45,17 +45,19 @@ Trúc Cơ → Kết Đan  ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
 
 Today        0 mins
 
-This Week    0 mins
+This Week    2 hrs 47 mins
 
-Total        0 mins
+Total        2 hrs 47 mins
 ```
 
 ```text
 📅 OpenQuiz Activity
 
-Date        Day          Time            Words
-─────────────────────────────────────────────────
-26.10.16    Friday       0 mins          59 words
+Date        Day          Time             Words
+──────────────────────────────────────────────────
+26.10.17    Saturday     0 mins           10 words
+
+26.10.16    Friday       2 hrs 47 mins    59 words
 ```
 <!-- OPENQUIZ_STATS:END -->
 
