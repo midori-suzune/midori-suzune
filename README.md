@@ -20,10 +20,10 @@
 <h2 align="center">⚡ My Progress ⚡</h2>
 
 <div align="center">
-<img align="right" src="assets/english-progress-card/english-progress.svg" width="390" alt="English Progress" />
-<img src="https://streak-stats.demolab.com?user=midori-suzune&theme=dracula" height="170" alt="GitHub Streak" />
+<img src="https://streak-stats.demolab.com?user=midori-suzune&theme=dracula" height="170" alt="GitHub Streak" /> <img src="https://my-readme-stats-eight.vercel.app/api/top-langs/?username=midori-suzune&layout=compact&theme=dracula&hide_border=false" height="170" alt="Top Languages" />
 <br />
-<img src="https://my-readme-stats-eight.vercel.app/api/top-langs/?username=midori-suzune&layout=compact&theme=dracula&hide_border=false" height="170" alt="Top Languages" />
+<br />
+<img src="assets/english-progress-card/english-progress.svg" width="426" alt="English Progress" />
 </div>
 
 <h2 align="center"> 📚 Fluent English When ? 📚 </h2>
