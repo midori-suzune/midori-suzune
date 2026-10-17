@@ -34,7 +34,7 @@ Mastered: 715 words
 
 <!-- VOCAB_RANK:START -->
 ```text
-Trúc Cơ → Kết Đan  ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀  59.67%  (716 / 1200 words)
+Trúc Cơ → Kết Đan  ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀  59.58%  (715 / 1200 words)
 ```
 <!-- VOCAB_RANK:END -->
 
@@ -65,39 +65,39 @@ Date        Day          Time             Words
 
 Date        Skill          Title                                                   New Vocab
 ────────────────────────────────────────────────────────────────────────────────────────────────────
+26.10.17    Listening      Beginner bookbinding courses                              4 words
+
 26.10.11    Reading        Sydney Opera House                                       32 words
 
 26.10.10    Listening      Harwick Weekend Market                                   33 words
-
-26.10.7     Listening      Tilbrook Cleaning Services                               28 words
 ```
 <!-- YOUPASS:END -->
 
 <!-- DAILY_READING:START -->
 ```text
-📰 Daily Reading  28 articles 🔥
+📰 Daily Reading  29 articles 🔥
 
 Date       Topic          Article                                                  New Vocab
 ────────────────────────────────────────────────────────────────────────────────────────────────────
+26.10.17   Manga          The Villainess Who Came to Marry-C5                       13 words
+
 26.10.16   Manga          The Villainess Who Came to Marry-C4                       22 words
 
 26.10.14   Manga          The Villainess Who Came to Marry-C2                       17 words
-
-26.9.3     Novel          transferred-to-another-world-and-became-a-teacher-C1       6 words
 ```
 <!-- DAILY_READING:END -->
 
 <!-- DAILY_WATCHING:START -->
 ```text
-📺 Daily Watching  52 videos 🔥
+📺 Daily Watching  53 videos 🔥
 
 Date       Topic          Title                                                    New Vocab
 ────────────────────────────────────────────────────────────────────────────────────────────────────
+26.10.17   Gold           Why gold is so valuable                                    8 words
+
 26.10.11   Poetry         The power of poetry                                       10 words
 
 26.10.7    Feeling        What is that unpleasant feeling on our skin               10 words
-
-26.10.3    Email           Rude emails                                               9 words
 ```
 <!-- DAILY_WATCHING:END -->
 
