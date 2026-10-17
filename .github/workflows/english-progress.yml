@@ -1,0 +1,40 @@
+name: Update English Progress Card
+
+on:
+  schedule:
+    # 16:45 UTC = 23:45 Vietnam time
+    - cron: "45 16 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-card:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: master
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Read current README and rebuild card
+        run: |
+          git pull --ff-only origin master
+          python3 scripts/update-english-progress.py
+
+      - name: Commit updated card if changed
+        run: |
+          git add assets/english-progress-card/data.json assets/english-progress-card/english-progress.svg
+          if git diff --cached --quiet; then
+            echo "English Progress card is already up to date."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Update English Progress card [skip ci]"
+          git push origin HEAD:master

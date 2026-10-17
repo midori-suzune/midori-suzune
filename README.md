@@ -17,16 +17,20 @@
     <img src="https://cdn.simpleicons.org/swagger/85EA2D" height="48" />
     <img src="https://cdn.simpleicons.org/dbeaver/cfcfcf" height="48" />
 </div>
-<h2 align="center">⚡ GitHub Stats ⚡</h2>
+<h2 align="center">⚡ My Progress ⚡</h2>
 
-<div align="center">
-
-<img src="https://my-readme-stats-eight.vercel.app/api?username=midori-suzune&theme=dracula&hide_border=false&include_all_commits=true&count_private=true" height="170" />
-<img src="https://streak-stats.demolab.com?user=midori-suzune&theme=dracula" height="170" alt="GitHub Streak" />
+<table align="center">
+<tr>
+<td align="center" valign="top" width="50%">
+<img src="https://streak-stats.demolab.com?user=midori-suzune&theme=dracula" width="390" alt="GitHub Streak" />
 <br />
-<img src="https://my-readme-stats-eight.vercel.app/api/top-langs/?username=midori-suzune&layout=compact&theme=dracula&hide_border=false" height="170" alt="Top Languages" />
-
-</div>
+<img src="https://my-readme-stats-eight.vercel.app/api/top-langs/?username=midori-suzune&layout=compact&theme=dracula&hide_border=false" width="390" alt="Top Languages" />
+</td>
+<td align="center" valign="top" width="50%">
+<img src="assets/english-progress-card/english-progress.svg" width="390" alt="English Progress" />
+</td>
+</tr>
+</table>
 
 <h2 align="center"> 📚 Fluent English When ? 📚 </h2>
 
