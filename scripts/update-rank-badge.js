@@ -9,11 +9,11 @@ const RANKS = [
   { min: 500, name: "Trúc Cơ" },
   { min: 1200, name: "Kết Đan" },
   { min: 2100, name: "Nguyên Anh" },
-  { min: 3100, name: "Bán Thần" },
-  { min: 4200, name: "Chân Thần" },
-  { min: 5400, name: "Bán Bộ Phi Thăng" },
-  { min: 6700, name: "Bán Tiên" },
-  { min: 7500, name: "Chân Tiên" },
+  { min: 3200, name: "Bán Thần" },
+  { min: 4600, name: "Chân Thần" },
+  { min: 6300, name: "Bán Bộ Phi Thăng" },
+  { min: 8300, name: "Bán Tiên" },
+  { min: 10700, name: "Chân Tiên" },
 ];
 
 function getRank(masteredWords) {
