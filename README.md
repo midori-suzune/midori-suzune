@@ -41,11 +41,11 @@ Trúc Cơ → Kết Đan  ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
 ```text
 ⏱️ OpenQuiz Study Time
 
-Today        0 mins
+Today        5 mins
 
-This Week    5 hrs 36 mins
+This Week    5 hrs 42 mins
 
-Total        5 hrs 36 mins
+Total        5 hrs 42 mins
 ```
 
 ```text
@@ -53,6 +53,8 @@ Total        5 hrs 36 mins
 
 Date        Day          Time             Words
 ──────────────────────────────────────────────────
+26.10.18    Sunday       5 mins           10 words
+
 26.10.17    Saturday     2 hrs 49 mins    30 words
 
 26.10.16    Friday       2 hrs 47 mins    59 words
