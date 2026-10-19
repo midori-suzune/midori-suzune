@@ -41,9 +41,9 @@ Trúc Cơ → Kết Đan  ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
 ```text
 ⏱️ OpenQuiz Study Time
 
-Today        0 mins
+Today        0 mins          0 words
 
-This Week    0 mins
+This Week    0 mins          0 words
 
 Total        7 hrs 51 mins
 ```

@@ -33,8 +33,8 @@ function resetOpenQuizStats(readme, isMonday) {
       throw new Error("Missing Today or This Week in OpenQuiz Study Time block.");
     }
 
-    const resetToday = block.replace(todayLine, (_, prefix) => `${prefix}0 mins`);
-    return isMonday ? resetToday.replace(weekLine, (_, prefix) => `${prefix}0 mins`) : resetToday;
+    const resetToday = block.replace(todayLine, (_, prefix) => `${prefix}${"0 mins".padEnd(12)}    0 words`);
+    return isMonday ? resetToday.replace(weekLine, (_, prefix) => `${prefix}${"0 mins".padEnd(12)}    0 words`) : resetToday;
   });
 
   return readme.slice(0, start + START_TAG.length) + updatedSection + readme.slice(end);
