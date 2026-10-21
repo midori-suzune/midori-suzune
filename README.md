@@ -30,7 +30,7 @@
 
 
 <!-- OPENQUIZ_STATS:START -->
-Mastered: 764 words
+Mastered: 762 words
 
 <!-- VOCAB_RANK:START -->
 ```text
@@ -41,11 +41,11 @@ Trúc Cơ → Kết Đan  ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
 ```text
 ⏱️ OpenQuiz Study Time
 
-Today        0 mins          0 words
+Today        3 hrs 20 mins    72 words
 
-This Week    1 hr 30 mins    103 words
+This Week    5 hrs 21 mins    175 words
 
-Total        10 hrs 22 mins
+Total        14 hrs 12 mins
 ```
 
 ```text
@@ -53,13 +53,13 @@ Total        10 hrs 22 mins
 
 Date        Day          Time             Words
 ───────────────────────────────────────────────────
-26.10.20    Tuesday      57 mins          103 words
+26.10.21    Wednesday    3 hrs 20 mins    72 words
+
+26.10.20    Tuesday      1 hr 27 mins     103 words
 
 26.10.19    Monday       32 mins          —
 
 26.10.18    Sunday       3 hrs 15 mins    102 words
-
-26.10.17    Saturday     2 hrs 49 mins    30 words
 ```
 <!-- OPENQUIZ_STATS:END -->
 
