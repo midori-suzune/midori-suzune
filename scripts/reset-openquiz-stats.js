@@ -21,16 +21,16 @@ function resetOpenQuizStats(readme, isMonday) {
   }
 
   const section = readme.slice(start + START_TAG.length, end);
-  const studyBlock = /```text\r?\n⏱️ OpenQuiz Study Time\r?\n[\s\S]*?\r?\n```/;
+  const studyBlock = /```text\r?\n⏱️ English Study Time\r?\n[\s\S]*?\r?\n```/;
   if (!studyBlock.test(section)) {
-    throw new Error("Missing OpenQuiz Study Time block in README.");
+    throw new Error("Missing English Study Time block in README.");
   }
 
   const updatedSection = section.replace(studyBlock, (block) => {
     const todayLine = /^([ \t]*Today[ \t]+)[^\r\n]+$/m;
     const weekLine = /^([ \t]*This Week[ \t]+)[^\r\n]+$/m;
     if (!todayLine.test(block) || !weekLine.test(block)) {
-      throw new Error("Missing Today or This Week in OpenQuiz Study Time block.");
+      throw new Error("Missing Today or This Week in English Study Time block.");
     }
 
     const resetToday = block.replace(todayLine, (_, prefix) => `${prefix}${"0 mins".padEnd(12)}    0 words`);

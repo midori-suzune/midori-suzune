@@ -39,7 +39,7 @@ Trúc Cơ → Kết Đan  ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
 <!-- VOCAB_RANK:END -->
 
 ```text
-⏱️ OpenQuiz Study Time
+⏱️ English Study Time
 
 Today        3 hrs 24 mins    54 words
 

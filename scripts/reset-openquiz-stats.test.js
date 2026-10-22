@@ -7,7 +7,7 @@ const readme = `Before
 Mastered: 715 words
 
 \`\`\`text
-⏱️ OpenQuiz Study Time
+⏱️ English Study Time
 
 Today        2 hrs 14 mins    100 words
 
