@@ -34,7 +34,7 @@ Mastered: 782 words
 
 <!-- VOCAB_RANK:START -->
 ```text
-Trúc Cơ → Kết Đan  ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀  63.50%  (762 / 1200 words)
+Trúc Cơ → Kết Đan  ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀  65.17%  (782 / 1200 words)
 ```
 <!-- VOCAB_RANK:END -->
 
@@ -69,39 +69,39 @@ Date        Day          Time             Words
 
 Date        Skill          Title                                                   New Vocab
 ────────────────────────────────────────────────────────────────────────────────────────────────────
+26.10.22    Listening      Fairmead online delivery                                  2 words
+
 26.10.17    Listening      Beginner bookbinding courses                              4 words
 
 26.10.11    Reading        Sydney Opera House                                       32 words
-
-26.10.10    Listening      Harwick Weekend Market                                   33 words
 ```
 <!-- YOUPASS:END -->
 
 <!-- DAILY_READING:START -->
 ```text
-📰 Daily Reading  29 articles 🔥
+📰 Daily Reading  30 articles 🔥
 
 Date       Topic          Article                                                  New Vocab
 ────────────────────────────────────────────────────────────────────────────────────────────────────
+26.10.22   Manga          The Villainess Who Came to Marry-C6                       13 words
+
 26.10.17   Manga          The Villainess Who Came to Marry-C5                       13 words
 
 26.10.16   Manga          The Villainess Who Came to Marry-C4                       22 words
-
-26.10.14   Manga          The Villainess Who Came to Marry-C2                       17 words
 ```
 <!-- DAILY_READING:END -->
 
 <!-- DAILY_WATCHING:START -->
 ```text
-📺 Daily Watching  53 videos 🔥
+📺 Daily Watching  54 videos 🔥
 
 Date       Topic          Title                                                    New Vocab
 ────────────────────────────────────────────────────────────────────────────────────────────────────
+26.10.22   Cold           How do we adapt to the cold?                               8 words
+
 26.10.17   Gold           Why gold is so valuable                                    8 words
 
 26.10.11   Poetry         The power of poetry                                       10 words
-
-26.10.7    Feeling        What is that unpleasant feeling on our skin               10 words
 ```
 <!-- DAILY_WATCHING:END -->
 
