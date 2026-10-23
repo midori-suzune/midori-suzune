@@ -19,7 +19,7 @@ jobs:
           youtube_api_key: ${{ secrets.YOUTUBE_API }}
           show_duration: true
           max_videos: 2
-          card_width: 160
+          card_width: 250
           border_radius: 5
           output_type: html
           max_title_lines: 2
