@@ -111,9 +111,13 @@ Date       Topic          Title                                                 
 
 <!--ANIME_START-->
 <p align="center">
-<a href="https://anilist.co/anime/206282"><img src="assets/anime/206282.png" width="170" alt="Anime: The Eternal Supreme, Li Yunxiao"></a>
-<a href="https://anilist.co/anime/194393"><img src="assets/anime/194393.png" width="170" alt="Anime: I Want to End this Love Game"></a>
-<a href="https://anilist.co/manga/184974"><img src="assets/manga/184974.png" width="170" alt="Manga: The Villainess Who Came to Marry Into the Frontier Noble&#x27;s Household Is an Exceptionally Capable Wife, Isn&#x27;t She?"></a>
+<a href="https://anilist.co/anime/206282"><img src="assets/anime/206282.png" width="160" alt="Anime: The Eternal Supreme, Li Yunxiao"></a>
+<a href="https://anilist.co/anime/194393"><img src="assets/anime/194393.png" width="160" alt="Anime: I Want to End this Love Game"></a>
+<a href="https://anilist.co/manga/184974"><img src="assets/manga/184974.png" width="160" alt="Manga: The Villainess Who Came to Marry Into the Frontier Noble&#x27;s Household Is an Exceptionally Capable Wife, Isn&#x27;t She?"></a>
+</p>
+<p align="center">
+<!-- BEGIN YOUTUBE-CARDS -->
+<!-- END YOUTUBE-CARDS -->
 </p>
 <!--ANIME_END-->
 

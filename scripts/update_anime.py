@@ -150,19 +150,27 @@ def render_block(anime, manga):
             files[f"{kind}/{name}"] = create_card(item, kind)
             title = html.escape(display_title(media), quote=True)
             url = html.escape(media["siteUrl"], quote=True)
-            cards.append(f'<a href="{url}"><img src="assets/{kind}/{name}" width="170" alt="{kind.title()}: {title}"></a>')
-    rows = ["\n".join(cards[index:index + 3]) for index in range(0, len(cards), 3)]
+            cards.append(f'<a href="{url}"><img src="assets/{kind}/{name}" width="160" alt="{kind.title()}: {title}"></a>')
+    rows = ["\n".join(cards[index:index + 4]) for index in range(0, len(cards), 4)]
     content = "\n<br />\n".join(rows) if rows else "No anime or manga activity yet."
-    block = '<!--ANIME_START-->\n<p align="center">\n' + content + '\n</p>\n<!--ANIME_END-->'
+    block = ('<!--ANIME_START-->\n<p align="center">\n' + content + '\n</p>\n'
+             '<p align="center">\n<!-- BEGIN YOUTUBE-CARDS -->\n'
+             '<!-- END YOUTUBE-CARDS -->\n</p>\n<!--ANIME_END-->')
     return block, files
 
 
 def main():
     text = README.read_text(encoding="utf-8")
     pattern = r"<!--ANIME_START-->.*?<!--ANIME_END-->"
-    if len(re.findall(pattern, text, flags=re.S)) != 1:
+    matches = re.findall(pattern, text, flags=re.S)
+    if len(matches) != 1:
         raise RuntimeError("README must contain exactly one ANIME_START/ANIME_END block")
+    youtube_pattern = r"<!-- BEGIN YOUTUBE-CARDS -->.*?<!-- END YOUTUBE-CARDS -->"
+    youtube_matches = re.findall(youtube_pattern, matches[0], flags=re.S)
+    if len(youtube_matches) != 1:
+        raise RuntimeError("Anime block must contain exactly one YOUTUBE-CARDS block")
     block, files = render_block(*fetch_items())
+    block = block.replace('<!-- BEGIN YOUTUBE-CARDS -->\n<!-- END YOUTUBE-CARDS -->', youtube_matches[0])
     for name, data in files.items():
         destination = ASSETS / name
         destination.parent.mkdir(parents=True, exist_ok=True)
