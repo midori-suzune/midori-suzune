@@ -34,7 +34,7 @@ Mastered: 813 words
 
 <!-- VOCAB_RANK:START -->
 ```text
-Trúc Cơ → Kết Đan  ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀  65.17%  (782 / 1200 words)
+Trúc Cơ → Kết Đan  ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀  67.75%  (813 / 1200 words)
 ```
 <!-- VOCAB_RANK:END -->
 
