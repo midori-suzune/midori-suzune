@@ -15,9 +15,10 @@ ASSETS = README.parent / "assets"
 USER_AGENT = "Suzune-Profile-Anime/1.0 (+https://github.com/midori-suzune/midori-suzune)"
 QUERY = """
 query ($name: String) {
-  anime: Page(perPage: 3) {
+  anime: Page(perPage: 4) {
     mediaList(userName: $name, type: ANIME, sort: UPDATED_TIME_DESC) {
       progress
+      updatedAt
       media {
         id
         title { english romaji }
@@ -27,9 +28,10 @@ query ($name: String) {
       }
     }
   }
-  manga: Page(perPage: 3) {
+  manga: Page(perPage: 4) {
     mediaList(userName: $name, type: MANGA, sort: UPDATED_TIME_DESC) {
       progress
+      updatedAt
       media {
         id
         title { english romaji }
@@ -143,14 +145,18 @@ def create_card(item, kind):
 def render_block(anime, manga):
     cards = []
     files = {}
-    for kind, items in (("anime", anime), ("manga", manga)):
-        for item in items:
-            media = item["media"]
-            name = f"{int(media['id'])}.png"
-            files[f"{kind}/{name}"] = create_card(item, kind)
-            title = html.escape(display_title(media), quote=True)
-            url = html.escape(media["siteUrl"], quote=True)
-            cards.append(f'<a href="{url}"><img src="assets/{kind}/{name}" width="160" alt="{kind.title()}: {title}"></a>')
+    recent = sorted(
+        ((kind, item) for kind, items in (("anime", anime), ("manga", manga)) for item in items),
+        key=lambda entry: entry[1].get("updatedAt") or 0,
+        reverse=True,
+    )[:4]
+    for kind, item in recent:
+        media = item["media"]
+        name = f"{int(media['id'])}.png"
+        files[f"{kind}/{name}"] = create_card(item, kind)
+        title = html.escape(display_title(media), quote=True)
+        url = html.escape(media["siteUrl"], quote=True)
+        cards.append(f'<a href="{url}"><img src="assets/{kind}/{name}" width="160" alt="{kind.title()}: {title}"></a>')
     rows = ["\n".join(cards[index:index + 4]) for index in range(0, len(cards), 4)]
     content = "\n<br />\n".join(rows) if rows else "No anime or manga activity yet."
     block = ('<!--ANIME_START-->\n<p align="center">\n' + content + '\n</p>\n'
