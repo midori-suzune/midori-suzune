@@ -3,13 +3,28 @@ on:
   schedule:
     - cron: "0 17 * * *"
   workflow_dispatch:
+concurrency:
+  group: readme-update
+  cancel-in-progress: false
 jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
       contents: write
     steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Install card rendering dependencies
+        run: |
+          python3 -m pip install "Pillow==10.2.0"
+          sudo apt-get update
+          sudo apt-get install -y fonts-dejavu-core
       - uses: DenverCoder1/github-readme-youtube-cards@main
+        id: youtube
         with:
           playlist_id: ${{ secrets.PLAYLIST_KEY }}
           comment_tag_name: YOUTUBE-CARDS
@@ -26,4 +41,22 @@ jobs:
           theme_context_light: '{ "background_color": "#f6f8fa", "title_color": "#24292f", "stats_color": "#57606a" }'
           theme_context_dark: '{ "background_color": "#1f2335", "title_color": "#e6edf3", "stats_color": "#a6adc8" }'
           readme_path: README.md
-          commit_message: "docs(readme): update YouTube cards"
+          output_only: true
+      - name: Render portrait YouTube cards
+        run: python3 scripts/update_youtube.py
+        env:
+          YOUTUBE_CARDS: ${{ steps.youtube.outputs.markdown }}
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API }}
+      - name: Commit and push changes
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md assets/youtube
+          if git diff --cached --quiet; then
+            echo "No YouTube changes."
+            exit 0
+          fi
+          git commit -m "docs(readme): update YouTube cards"
+          git pull --rebase
+          git push
