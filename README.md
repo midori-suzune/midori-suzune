@@ -34,7 +34,7 @@ Mastered: 823 words
 
 <!-- VOCAB_RANK:START -->
 ```text
-Trúc Cơ → Kết Đan  ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀  67.75%  (813 / 1200 words)
+Trúc Cơ → Kết Đan  ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣀⣀⣀⣀⣀⣀⣀⣀⣀  68.58%  (823 / 1200 words)
 ```
 <!-- VOCAB_RANK:END -->
 
@@ -69,25 +69,25 @@ Date        Day          Time             Words
 
 Date        Skill          Title                                                   New Vocab
 ────────────────────────────────────────────────────────────────────────────────────────────────────
+26.10.24    Reading        The Lord Howe Island stick insect                        16 words
+
 26.10.22    Listening      Fairmead online delivery                                  2 words
 
 26.10.17    Listening      Beginner bookbinding courses                              4 words
-
-26.10.11    Reading        Sydney Opera House                                       32 words
 ```
 <!-- YOUPASS:END -->
 
 <!-- DAILY_READING:START -->
 ```text
-📰 Daily Reading  30 articles 🔥
+📰 Daily Reading  31 articles 🔥
 
 Date       Topic          Article                                                  New Vocab
 ────────────────────────────────────────────────────────────────────────────────────────────────────
+26.10.24   Manga          The Villainess Who Came to Marry-C7                       14 words
+
 26.10.22   Manga          The Villainess Who Came to Marry-C6                       13 words
 
 26.10.17   Manga          The Villainess Who Came to Marry-C5                       13 words
-
-26.10.16   Manga          The Villainess Who Came to Marry-C4                       22 words
 ```
 <!-- DAILY_READING:END -->
 
