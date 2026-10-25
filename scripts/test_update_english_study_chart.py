@@ -83,6 +83,13 @@ Date        Day          Time             Words
         self.assertEqual(days[0]["minutes"], 87)
         self.assertEqual(days[-2]["minutes"], 335)  # Fresh README value wins.
 
+    def test_readme_time_overrides_later_browser_snapshot(self):
+        readme = self.readme.replace("5 hrs 35 mins", "4 hrs 41 mins")
+        browser_snapshot = [{"date": "2026-10-25", "day": "Sun", "minutes": 316, "words": 59}]
+        days, _ = updater.read_days(readme, date(2026, 10, 26), browser_snapshot)
+        self.assertEqual(days[-2]["minutes"], 281)
+        self.assertIn("4h41", chart.build({"days": days, "current_streak_days": 65}))
+
 
 if __name__ == "__main__":
     unittest.main()

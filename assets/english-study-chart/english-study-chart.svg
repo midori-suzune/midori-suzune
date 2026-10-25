@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="600" height="300" viewBox="0 0 600 300" role="img" aria-labelledby="title desc">
 <title id="title">English study — last 7 days</title>
-<desc id="desc">Study last 7 days: 23h 27m. Words last 7 days: 455. Current streak: 65 days. Goal: 3 hours per day. 2026-10-20: 1h 27m; 2026-10-21: 3h 35m; 2026-10-22: 3h 35m; 2026-10-23: 5h 35m; 2026-10-24: 3h 59m; 2026-10-25: 5h 16m; 2026-10-26: 0h 00m</desc>
+<desc id="desc">Study last 7 days: 22h 52m. Words last 7 days: 455. Current streak: 65 days. Goal: 3 hours per day. 2026-10-20: 1h 27m; 2026-10-21: 3h 35m; 2026-10-22: 3h 35m; 2026-10-23: 5h 35m; 2026-10-24: 3h 59m; 2026-10-25: 4h 41m; 2026-10-26: 0h 00m</desc>
 <rect x="0.5" y="0.5" width="599" height="299" rx="6" fill="#0D1117" stroke="#586575" stroke-width="0.7"/>
 <g font-family="DejaVu Sans Mono,Consolas,monospace" font-weight="400">
-<text x="106.00" y="32.00" font-size="16" fill="#E6EDF3" text-anchor="middle">23h 27m</text>
+<text x="106.00" y="32.00" font-size="16" fill="#E6EDF3" text-anchor="middle">22h 52m</text>
 <text x="106.00" y="53.00" font-size="11" fill="#B6C2D2" text-anchor="middle">Study last 7 days</text>
 <text x="300.00" y="32.00" font-size="16" fill="#E6EDF3" text-anchor="middle">455</text>
 <text x="300.00" y="53.00" font-size="11" fill="#B6C2D2" text-anchor="middle">Words last 7 days</text>
@@ -39,8 +39,8 @@
 <rect x="368.000" y="145.811" width="42" height="114.189" fill="#7DE39D" fill-opacity="0.75"><title>2026-10-24: 3h 59m</title></rect>
 <text x="389.00" y="139.81" font-size="9.5" fill="#E6EDF3" text-anchor="middle">3h59</text>
 <text x="389.00" y="281.00" font-size="11" fill="#B6C2D2" text-anchor="middle">Sat</text>
-<rect x="446.000" y="109.022" width="42" height="150.978" fill="#7DE39D" fill-opacity="0.75"><title>2026-10-25: 5h 16m</title></rect>
-<text x="467.00" y="103.02" font-size="9.5" fill="#E6EDF3" text-anchor="middle">5h16</text>
+<rect x="446.000" y="125.744" width="42" height="134.256" fill="#7DE39D" fill-opacity="0.75"><title>2026-10-25: 4h 41m</title></rect>
+<text x="467.00" y="119.74" font-size="9.5" fill="#E6EDF3" text-anchor="middle">4h41</text>
 <text x="467.00" y="281.00" font-size="11" fill="#B6C2D2" text-anchor="middle">Sun</text>
 <rect x="524.000" y="260.000" width="42" height="0.000" fill="#EA6D6D" fill-opacity="0.75"><title>2026-10-26: 0h 00m</title></rect>
 <text x="545.00" y="254.00" font-size="9.5" fill="#E6EDF3" text-anchor="middle">0h</text>

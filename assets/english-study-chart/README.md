@@ -4,9 +4,10 @@ This 600 × 300 SVG replaces the old English Progress card in the profile README
 It shows the last seven local calendar days (oldest to newest), daily OpenQuiz study
 minutes and words, and the OpenQuiz streak. A dash means data has not been synced;
 it is not treated as zero. The axis grows automatically for days over five hours.
-The initial `data.json` uses the Oct 20–26 values shown in the user's OpenQuiz
-browser console (Oct 26 had not been studied yet); it is not the sample data from
-the ZIP. These historical times were measured before the presence-timer fix.
+The initial `data.json` uses the Oct 20–26 values from OpenQuiz, with any
+available README activity rows taking priority over the browser-console snapshot.
+Oct 26 had not been studied yet. These historical times were measured before
+the presence-timer fix; no sample data from the ZIP is used.
 
 The PreMiD OpenQuiz presence syncs seven daily activity rows into the README near
 23:30 local time. `.github/workflows/english-study-chart.yml` then runs at 23:45
