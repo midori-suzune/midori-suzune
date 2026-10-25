@@ -45,20 +45,24 @@ def read_stats(readme):
         rank_match = re.search(r"^\s*(.+?)\s{2,}⣿", rank, re.MULTILINE)
     if not rank_match:
         raise ValueError("Missing vocabulary rank")
-    return {
+    stats = {
         "mastered_words": number(openquiz, r"Mastered:\s*([\d,]+)\s*words"),
         "ranking": rank_match.group(1),
         "videos_watched": number(watching, r"Daily Watching\s+([\d,]+)\s+videos"),
         "articles_read": number(reading, r"Daily Reading\s+([\d,]+)\s+articles"),
         "latest_watching_topic": latest_watching_topic(watching),
     }
+    streak_match = re.search(r"^Streak:\s*(\d+)\s*days\s*$", openquiz, re.IGNORECASE | re.MULTILINE)
+    if streak_match:
+        stats["vocab_streak_days"] = int(streak_match.group(1))
+    return stats
 
 
 def update_card():
     readme = (ROOT / "README.md").read_text(encoding="utf-8")
     data_path = CARD / "data.json"
     data = json.loads(data_path.read_text(encoding="utf-8"))
-    # Keep the configured streak at 50 until a reliable source is available.
+    # Keep the existing streak until OpenQuiz has synced a current value.
     data.update(read_stats(readme))
     new_data = json.dumps(data, ensure_ascii=False, indent=2) + "\n"
     if data_path.read_text(encoding="utf-8") != new_data:
