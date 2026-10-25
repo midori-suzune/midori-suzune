@@ -140,9 +140,7 @@ Date       Topic          Title                                                 
 <summary> View Weekly Coding Stats</summary>
 
 <!--START_SECTION:waka-->
-![Code Time](http://img.shields.io/badge/Code%20Time-1%2C783%20hrs%2032%20mins-blue?style=flat)
-
-![AI Code Time](http://img.shields.io/badge/AI%20Code%20Time-581%20hrs%2035%20mins-blue?style=flat)
+![Code Time](http://img.shields.io/badge/Code%20Time-1%2C783%20hrs%2032%20mins-blue?style=flat) ![AI Code Time](http://img.shields.io/badge/AI%20Code%20Time-581%20hrs%2035%20mins-blue?style=flat)
 
 📊 **This Week I Spent My Time On** 
 
