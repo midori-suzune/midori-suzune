@@ -23,7 +23,7 @@
 <img src="https://streak-stats.demolab.com?user=midori-suzune&theme=dracula" height="170" alt="GitHub Streak" /> <img src="https://my-readme-stats-eight.vercel.app/api/top-langs/?username=midori-suzune&layout=compact&theme=dracula&hide_border=false" height="170" alt="Top Languages" />
 <br />
 <br />
-<img src="assets/english-progress-card/english-progress.svg" width="426" alt="English Progress" />
+<img src="assets/english-study-chart/english-study-chart.svg" width="600" alt="English study over the last 7 days" />
 </div>
 
 <h2 align="center"> 📚 Fluent English When ? 📚 </h2>
@@ -31,7 +31,7 @@
 
 <!-- OPENQUIZ_STATS:START -->
 Mastered: 824 words
-Streak: 65 days
+<!-- OPENQUIZ_STREAK:65 -->
 
 <!-- VOCAB_RANK:START -->
 ```text

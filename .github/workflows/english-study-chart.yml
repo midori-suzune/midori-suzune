@@ -1,4 +1,4 @@
-name: Update English Progress Card
+name: Update English Study Chart
 
 on:
   schedule:
@@ -10,7 +10,7 @@ permissions:
   contents: write
 
 jobs:
-  update-card:
+  update-chart:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
@@ -21,20 +21,20 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Read current README and rebuild card
+      - name: Read OpenQuiz activity and rebuild chart
         run: |
           git pull --ff-only origin master
-          python3 scripts/update-english-progress.py
+          python3 scripts/update-english-study-chart.py
 
-      - name: Commit updated card if changed
+      - name: Commit updated chart if changed
         run: |
-          git add assets/english-progress-card/data.json assets/english-progress-card/english-progress.svg
+          git add assets/english-study-chart/data.json assets/english-study-chart/english-study-chart.svg
           if git diff --cached --quiet; then
-            echo "English Progress card is already up to date."
+            echo "English Study chart is already up to date."
             exit 0
           fi
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "Update English Progress card [skip ci]"
+          git commit -m "Update English Study chart [skip ci]"
           git push origin HEAD:master
