@@ -4,12 +4,6 @@
   "bar_opacity": 0.75,
   "days": [
     {
-      "date": "2026-10-20",
-      "day": "Tue",
-      "minutes": 87,
-      "words": 103
-    },
-    {
       "date": "2026-10-21",
       "day": "Wed",
       "minutes": 215,
@@ -44,6 +38,12 @@
       "day": "Mon",
       "minutes": 35,
       "words": 45
+    },
+    {
+      "date": "2026-10-27",
+      "day": "Tue",
+      "minutes": null,
+      "words": null
     }
   ],
   "current_streak_days": 64
