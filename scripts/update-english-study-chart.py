@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Build the rolling seven-day chart from OpenQuiz's README activity rows."""
+"""Build the rolling seven-day chart from OpenQuiz's README data."""
 
 import importlib.util
 import json
 import re
 import sys
-from datetime import datetime, timedelta
+from datetime import date, datetime, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -40,6 +40,20 @@ def read_days(readme, today, previous_days=()):
             "minutes": (int(hours.group(1)) * 60 if hours else 0) + int(minutes.group(1)),
             "words": int(words.split()[0]) if words != "—" else None,
         }
+    if "<!-- OPENQUIZ_DAYS:" in section:
+        hidden = re.search(r"<!-- OPENQUIZ_DAYS:(\{[^\n]*\})\s*-->", section)
+        if not hidden:
+            raise ValueError("Invalid OPENQUIZ_DAYS comment in README")
+        hidden_days = json.loads(hidden.group(1))
+        if not isinstance(hidden_days, dict):
+            raise ValueError("OPENQUIZ_DAYS must be a date-to-stats object")
+        recorded = {}
+        for key, values in hidden_days.items():
+            if (not isinstance(values, list) or len(values) != 2
+                    or any(type(value) is not int or value < 0 for value in values)):
+                raise ValueError("Invalid OPENQUIZ_DAYS daily stats")
+            recorded[date.fromisoformat(key)] = {"minutes": values[0], "words": values[1]}
+
     if not recorded:
         raise ValueError("No parseable OpenQuiz daily activity rows in README")
 

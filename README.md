@@ -61,13 +61,9 @@ Date        Day          Time             Words
 26.10.24    Saturday     3 hrs 59 mins    98 words
 
 26.10.23    Friday       5 hrs 35 mins    69 words
-
-26.10.22    Thursday     3 hrs 35 mins    54 words
-
-26.10.21    Wednesday    3 hrs 35 mins    72 words
-
-26.10.20    Tuesday      1 hr 27 mins     103 words
 ```
+
+<!-- OPENQUIZ_DAYS:{"2026-10-26":[35,45],"2026-10-25":[316,59],"2026-10-24":[239,98],"2026-10-23":[335,69],"2026-10-22":[215,54],"2026-10-21":[215,72],"2026-10-20":[87,103]} -->
 <!-- OPENQUIZ_STATS:END -->
 
 <!-- YOUPASS:START -->

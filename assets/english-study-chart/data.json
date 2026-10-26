@@ -36,15 +36,15 @@
     {
       "date": "2026-10-25",
       "day": "Sun",
-      "minutes": 281,
+      "minutes": 316,
       "words": 59
     },
     {
       "date": "2026-10-26",
       "day": "Mon",
-      "minutes": 0,
-      "words": 0
+      "minutes": 35,
+      "words": 45
     }
   ],
-  "current_streak_days": 65
+  "current_streak_days": 64
 }

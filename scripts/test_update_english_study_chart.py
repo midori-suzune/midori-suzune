@@ -49,6 +49,23 @@ Date        Day          Time             Words
         _, streak = updater.read_days(readme, date(2026, 10, 26))
         self.assertEqual(streak, 12)
 
+    def test_hidden_seven_days_take_priority_over_visible_four(self):
+        hidden = ('<!-- OPENQUIZ_DAYS:{"2026-10-20":[87,103],'
+                  '"2026-10-25":[281,59],"2026-10-26":[35,45]} -->')
+        readme = self.readme.replace("<!-- OPENQUIZ_STATS:END -->", hidden + "\n<!-- OPENQUIZ_STATS:END -->")
+        days, streak = updater.read_days(readme, date(2026, 10, 26))
+        self.assertEqual(len(days), 7)
+        self.assertEqual(days[0]["minutes"], 87)
+        self.assertEqual(days[-2]["minutes"], 281)  # Visible row is 5h35, hidden is 4h41.
+        self.assertEqual(days[-1]["words"], 45)
+        self.assertEqual(streak, 12)
+
+    def test_invalid_hidden_stats_do_not_fall_back_to_visible_rows(self):
+        readme = self.readme.replace("<!-- OPENQUIZ_STATS:END -->",
+                                     '<!-- OPENQUIZ_DAYS:{"2026-10-26":[-1,45]} -->\n<!-- OPENQUIZ_STATS:END -->')
+        with self.assertRaisesRegex(ValueError, "Invalid OPENQUIZ_DAYS"):
+            updater.read_days(readme, date(2026, 10, 26))
+
     def test_chart_expands_axis_and_marks_incomplete_totals(self):
         days, streak = updater.read_days(self.readme, date(2026, 10, 26))
         svg = chart.build({"days": days, "current_streak_days": streak})
