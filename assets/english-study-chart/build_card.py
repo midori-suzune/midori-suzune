@@ -43,19 +43,20 @@ def build(data):
     if streak is not None:
         number(streak, "current_streak_days")
     maximum = max(int(minimum), math.ceil(goal), *(math.ceil(day["minutes"] / 60) for day in days if day["minutes"] is not None))
-    complete_time = all(day["minutes"] is not None for day in days)
-    complete_words = all(day["words"] is not None for day in days)
+    time_days = sum(day["minutes"] is not None for day in days)
+    word_days = sum(day["words"] is not None for day in days)
     total_minutes = sum(day["minutes"] or 0 for day in days)
     total_words = sum(day["words"] or 0 for day in days)
-    study_label = time_label(total_minutes) if complete_time else "—"
-    words_label = f"{total_words:g}" if complete_words else "—"
+    study_label = time_label(total_minutes) if time_days else "—"
+    words_label = f"{total_words:g}" if word_days else "—"
     streak_label = f"{streak:g} days" if streak is not None else "—"
 
     bg, fg, muted = "#0D1117", "#E6EDF3", "#B6C2D2"
     left, right, top, bottom = 38, 584, 88, 260
     height = bottom - top
     description = (
-        f"Study last 7 days: {study_label}. Words last 7 days: {words_label}. "
+        f"Study last 7 days: {study_label} ({time_days} of 7 days recorded). "
+        f"Words last 7 days: {words_label} ({word_days} of 7 days recorded). "
         f"Current streak: {streak_label}. Goal: {goal:g} hours per day. "
         + "; ".join(f"{day['date']}: {time_label(day['minutes']) if day['minutes'] is not None else 'no data'}" for day in days)
     )

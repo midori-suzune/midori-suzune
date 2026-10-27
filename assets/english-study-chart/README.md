@@ -4,6 +4,8 @@ This 600 × 300 SVG replaces the old English Progress card in the profile README
 It shows the last seven local calendar days (oldest to newest), daily OpenQuiz study
 minutes and words, and the OpenQuiz streak. A dash means data has not been synced;
 it is not treated as zero. The axis grows automatically for days over five hours.
+Totals add the available days; the SVG description reports how many days have
+data when the window is incomplete. The visible headings stay unchanged.
 The initial `data.json` was seeded from the Oct 20–26 OpenQuiz records; current
 README sync data takes priority over that earlier snapshot. The historical
 times were measured before the presence-timer fix; no sample data from the ZIP

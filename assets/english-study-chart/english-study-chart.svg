@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="600" height="300" viewBox="0 0 600 300" role="img" aria-labelledby="title desc">
 <title id="title">English study — last 7 days</title>
-<desc id="desc">Study last 7 days: —. Words last 7 days: —. Current streak: 64 days. Goal: 3 hours per day. 2026-10-21: 3h 35m; 2026-10-22: 3h 35m; 2026-10-23: 5h 35m; 2026-10-24: 3h 59m; 2026-10-25: 5h 16m; 2026-10-26: 0h 35m; 2026-10-27: no data</desc>
+<desc id="desc">Study last 7 days: 22h 35m (6 of 7 days recorded). Words last 7 days: 397 (6 of 7 days recorded). Current streak: 64 days. Goal: 3 hours per day. 2026-10-21: 3h 35m; 2026-10-22: 3h 35m; 2026-10-23: 5h 35m; 2026-10-24: 3h 59m; 2026-10-25: 5h 16m; 2026-10-26: 0h 35m; 2026-10-27: no data</desc>
 <rect x="0.5" y="0.5" width="599" height="299" rx="6" fill="#0D1117" stroke="#586575" stroke-width="0.7"/>
 <g font-family="DejaVu Sans Mono,Consolas,monospace" font-weight="400">
-<text x="106.00" y="32.00" font-size="16" fill="#E6EDF3" text-anchor="middle">—</text>
+<text x="106.00" y="32.00" font-size="16" fill="#E6EDF3" text-anchor="middle">22h 35m</text>
 <text x="106.00" y="53.00" font-size="11" fill="#B6C2D2" text-anchor="middle">Study last 7 days</text>
-<text x="300.00" y="32.00" font-size="16" fill="#E6EDF3" text-anchor="middle">—</text>
+<text x="300.00" y="32.00" font-size="16" fill="#E6EDF3" text-anchor="middle">397</text>
 <text x="300.00" y="53.00" font-size="11" fill="#B6C2D2" text-anchor="middle">Words last 7 days</text>
 <text x="494.00" y="32.00" font-size="16" fill="#E6EDF3" text-anchor="middle">64 days</text>
 <text x="494.00" y="53.00" font-size="11" fill="#B6C2D2" text-anchor="middle">Current streak</text>

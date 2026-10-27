@@ -66,15 +66,40 @@ Date        Day          Time             Words
         with self.assertRaisesRegex(ValueError, "Invalid OPENQUIZ_DAYS"):
             updater.read_days(readme, date(2026, 10, 26))
 
-    def test_chart_expands_axis_and_marks_incomplete_totals(self):
+    def test_chart_expands_axis_and_sums_recorded_days(self):
         days, streak = updater.read_days(self.readme, date(2026, 10, 26))
         svg = chart.build({"days": days, "current_streak_days": streak})
         self.assertIn("Study last 7 days", svg)
         self.assertIn("Words last 7 days", svg)
         self.assertIn(">6h</text>", svg)
         self.assertIn("2026-10-25", svg)
-        self.assertIn("Study last 7 days: —", svg)
+        self.assertIn("Study last 7 days: 9h 34m (4 of 7 days recorded)", svg)
+        self.assertIn("Words last 7 days: 157 (3 of 7 days recorded)", svg)
+        self.assertIn(">Study last 7 days</text>", svg)
+        self.assertIn(">Words last 7 days</text>", svg)
         self.assertIn("12 days", svg)
+
+    def test_new_day_without_sync_keeps_known_totals_and_missing_column(self):
+        data = {"days": [
+            {"date": "2026-10-21", "day": "Wed", "minutes": 215, "words": 72},
+            {"date": "2026-10-22", "day": "Thu", "minutes": 215, "words": 54},
+            {"date": "2026-10-23", "day": "Fri", "minutes": 335, "words": 69},
+            {"date": "2026-10-24", "day": "Sat", "minutes": 239, "words": 98},
+            {"date": "2026-10-25", "day": "Sun", "minutes": 316, "words": 59},
+            {"date": "2026-10-26", "day": "Mon", "minutes": 35, "words": 45},
+            {"date": "2026-10-27", "day": "Tue", "minutes": None, "words": None},
+        ], "current_streak_days": 64}
+        svg = chart.build(data)
+        self.assertIn("Study last 7 days: 22h 35m (6 of 7 days recorded)", svg)
+        self.assertIn("Words last 7 days: 397 (6 of 7 days recorded)", svg)
+        self.assertIn(">Study last 7 days</text>", svg)
+        self.assertIn(">—</text>", svg)
+
+    def test_no_recorded_days_still_shows_unknown_totals(self):
+        days = [{"date": "2026-10-21", "day": "Wed", "minutes": None, "words": None}] * 7
+        svg = chart.build({"days": days, "current_streak_days": None})
+        self.assertIn("Study last 7 days: — (0 of 7 days recorded)", svg)
+        self.assertIn("Words last 7 days: — (0 of 7 days recorded)", svg)
 
     def test_complete_week_sums_daily_values(self):
         days, _ = updater.read_days(self.readme, date(2026, 10, 26))
