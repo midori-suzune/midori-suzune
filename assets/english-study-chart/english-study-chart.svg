@@ -1,49 +1,47 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="600" height="300" viewBox="0 0 600 300" role="img" aria-labelledby="title desc">
 <title id="title">English study — last 7 days</title>
-<desc id="desc">Study last 7 days: 9h 26m (6 of 7 days recorded). Words last 7 days: 278 (6 of 7 days recorded). Current streak: 70 days. Goal: 3 hours per day. 2026-10-25: 5h 16m; 2026-10-26: 0h 50m; 2026-10-27: 0h 26m; 2026-10-28: 1h 18m; 2026-10-29: 1h 15m; 2026-10-30: 0h 21m; 2026-10-31: no data</desc>
+<desc id="desc">Study last 7 days: 5h 28m (6 of 7 days recorded). Words last 7 days: 291 (6 of 7 days recorded). Current streak: 71 days. Goal: 3 hours per day. 2026-10-26: 0h 50m; 2026-10-27: 0h 26m; 2026-10-28: 1h 18m; 2026-10-29: 1h 15m; 2026-10-30: 0h 49m; 2026-10-31: 0h 50m; 2026-11-01: no data</desc>
 <rect x="0.5" y="0.5" width="599" height="299" rx="6" fill="#0D1117" stroke="#586575" stroke-width="0.7"/>
 <g font-family="DejaVu Sans Mono,Consolas,monospace" font-weight="400">
-<text x="106.00" y="32.00" font-size="16" fill="#E6EDF3" text-anchor="middle">9h 26m</text>
+<text x="106.00" y="32.00" font-size="16" fill="#E6EDF3" text-anchor="middle">5h 28m</text>
 <text x="106.00" y="53.00" font-size="11" fill="#B6C2D2" text-anchor="middle">Study last 7 days</text>
-<text x="300.00" y="32.00" font-size="16" fill="#E6EDF3" text-anchor="middle">278</text>
+<text x="300.00" y="32.00" font-size="16" fill="#E6EDF3" text-anchor="middle">291</text>
 <text x="300.00" y="53.00" font-size="11" fill="#B6C2D2" text-anchor="middle">Words last 7 days</text>
-<text x="494.00" y="32.00" font-size="16" fill="#E6EDF3" text-anchor="middle">70 days</text>
+<text x="494.00" y="32.00" font-size="16" fill="#E6EDF3" text-anchor="middle">71 days</text>
 <text x="494.00" y="53.00" font-size="11" fill="#B6C2D2" text-anchor="middle">Current streak</text>
 <path d="M202 15V61 M396 15V61" stroke="#586575" stroke-width="0.7"/>
 <path d="M38 260.000H584" fill="none" stroke="#69788C" stroke-opacity="0.65" stroke-width="0.6" stroke-dasharray="4 3"/>
 <text x="31.00" y="263.00" font-size="10" fill="#B6C2D2" text-anchor="end">0h</text>
-<path d="M38 231.333H584" fill="none" stroke="#69788C" stroke-opacity="0.65" stroke-width="0.6" stroke-dasharray="4 3"/>
-<text x="31.00" y="234.33" font-size="10" fill="#B6C2D2" text-anchor="end">1h</text>
-<path d="M38 202.667H584" fill="none" stroke="#69788C" stroke-opacity="0.65" stroke-width="0.6" stroke-dasharray="4 3"/>
-<text x="31.00" y="205.67" font-size="10" fill="#B6C2D2" text-anchor="end">2h</text>
-<path d="M38 174.000H584" fill="none" stroke="#69788C" stroke-opacity="0.65" stroke-width="0.6" stroke-dasharray="4 3"/>
-<text x="31.00" y="177.00" font-size="10" fill="#B6C2D2" text-anchor="end">3h</text>
-<path d="M38 145.333H584" fill="none" stroke="#69788C" stroke-opacity="0.65" stroke-width="0.6" stroke-dasharray="4 3"/>
-<text x="31.00" y="148.33" font-size="10" fill="#B6C2D2" text-anchor="end">4h</text>
-<path d="M38 116.667H584" fill="none" stroke="#69788C" stroke-opacity="0.65" stroke-width="0.6" stroke-dasharray="4 3"/>
-<text x="31.00" y="119.67" font-size="10" fill="#B6C2D2" text-anchor="end">5h</text>
+<path d="M38 225.600H584" fill="none" stroke="#69788C" stroke-opacity="0.65" stroke-width="0.6" stroke-dasharray="4 3"/>
+<text x="31.00" y="228.60" font-size="10" fill="#B6C2D2" text-anchor="end">1h</text>
+<path d="M38 191.200H584" fill="none" stroke="#69788C" stroke-opacity="0.65" stroke-width="0.6" stroke-dasharray="4 3"/>
+<text x="31.00" y="194.20" font-size="10" fill="#B6C2D2" text-anchor="end">2h</text>
+<path d="M38 156.800H584" fill="none" stroke="#69788C" stroke-opacity="0.65" stroke-width="0.6" stroke-dasharray="4 3"/>
+<text x="31.00" y="159.80" font-size="10" fill="#B6C2D2" text-anchor="end">3h</text>
+<path d="M38 122.400H584" fill="none" stroke="#69788C" stroke-opacity="0.65" stroke-width="0.6" stroke-dasharray="4 3"/>
+<text x="31.00" y="125.40" font-size="10" fill="#B6C2D2" text-anchor="end">4h</text>
 <path d="M38 88.000H584" fill="none" stroke="#69788C" stroke-opacity="0.65" stroke-width="0.6" stroke-dasharray="4 3"/>
-<text x="31.00" y="91.00" font-size="10" fill="#B6C2D2" text-anchor="end">6h</text>
-<rect x="56.000" y="109.022" width="42" height="150.978" fill="#7DE39D" fill-opacity="0.75"><title>2026-10-25: 5h 16m</title></rect>
-<text x="77.00" y="103.02" font-size="9.5" fill="#E6EDF3" text-anchor="middle">5h16</text>
-<text x="77.00" y="281.00" font-size="11" fill="#B6C2D2" text-anchor="middle">Sun</text>
-<rect x="134.000" y="236.111" width="42" height="23.889" fill="#EA6D6D" fill-opacity="0.75"><title>2026-10-26: 0h 50m</title></rect>
-<text x="155.00" y="230.11" font-size="9.5" fill="#E6EDF3" text-anchor="middle">0h50</text>
-<text x="155.00" y="281.00" font-size="11" fill="#B6C2D2" text-anchor="middle">Mon</text>
-<rect x="212.000" y="247.578" width="42" height="12.422" fill="#EA6D6D" fill-opacity="0.75"><title>2026-10-27: 0h 26m</title></rect>
-<text x="233.00" y="241.58" font-size="9.5" fill="#E6EDF3" text-anchor="middle">0h26</text>
-<text x="233.00" y="281.00" font-size="11" fill="#B6C2D2" text-anchor="middle">Tue</text>
-<rect x="290.000" y="222.733" width="42" height="37.267" fill="#EA6D6D" fill-opacity="0.75"><title>2026-10-28: 1h 18m</title></rect>
-<text x="311.00" y="216.73" font-size="9.5" fill="#E6EDF3" text-anchor="middle">1h18</text>
-<text x="311.00" y="281.00" font-size="11" fill="#B6C2D2" text-anchor="middle">Wed</text>
-<rect x="368.000" y="224.167" width="42" height="35.833" fill="#EA6D6D" fill-opacity="0.75"><title>2026-10-29: 1h 15m</title></rect>
-<text x="389.00" y="218.17" font-size="9.5" fill="#E6EDF3" text-anchor="middle">1h15</text>
-<text x="389.00" y="281.00" font-size="11" fill="#B6C2D2" text-anchor="middle">Thu</text>
-<rect x="446.000" y="249.967" width="42" height="10.033" fill="#EA6D6D" fill-opacity="0.75"><title>2026-10-30: 0h 21m</title></rect>
-<text x="467.00" y="243.97" font-size="9.5" fill="#E6EDF3" text-anchor="middle">0h21</text>
-<text x="467.00" y="281.00" font-size="11" fill="#B6C2D2" text-anchor="middle">Fri</text>
+<text x="31.00" y="91.00" font-size="10" fill="#B6C2D2" text-anchor="end">5h</text>
+<rect x="56.000" y="231.333" width="42" height="28.667" fill="#EA6D6D" fill-opacity="0.75"><title>2026-10-26: 0h 50m</title></rect>
+<text x="77.00" y="225.33" font-size="9.5" fill="#E6EDF3" text-anchor="middle">0h50</text>
+<text x="77.00" y="281.00" font-size="11" fill="#B6C2D2" text-anchor="middle">Mon</text>
+<rect x="134.000" y="245.093" width="42" height="14.907" fill="#EA6D6D" fill-opacity="0.75"><title>2026-10-27: 0h 26m</title></rect>
+<text x="155.00" y="239.09" font-size="9.5" fill="#E6EDF3" text-anchor="middle">0h26</text>
+<text x="155.00" y="281.00" font-size="11" fill="#B6C2D2" text-anchor="middle">Tue</text>
+<rect x="212.000" y="215.280" width="42" height="44.720" fill="#EA6D6D" fill-opacity="0.75"><title>2026-10-28: 1h 18m</title></rect>
+<text x="233.00" y="209.28" font-size="9.5" fill="#E6EDF3" text-anchor="middle">1h18</text>
+<text x="233.00" y="281.00" font-size="11" fill="#B6C2D2" text-anchor="middle">Wed</text>
+<rect x="290.000" y="217.000" width="42" height="43.000" fill="#EA6D6D" fill-opacity="0.75"><title>2026-10-29: 1h 15m</title></rect>
+<text x="311.00" y="211.00" font-size="9.5" fill="#E6EDF3" text-anchor="middle">1h15</text>
+<text x="311.00" y="281.00" font-size="11" fill="#B6C2D2" text-anchor="middle">Thu</text>
+<rect x="368.000" y="231.907" width="42" height="28.093" fill="#EA6D6D" fill-opacity="0.75"><title>2026-10-30: 0h 49m</title></rect>
+<text x="389.00" y="225.91" font-size="9.5" fill="#E6EDF3" text-anchor="middle">0h49</text>
+<text x="389.00" y="281.00" font-size="11" fill="#B6C2D2" text-anchor="middle">Fri</text>
+<rect x="446.000" y="231.333" width="42" height="28.667" fill="#EA6D6D" fill-opacity="0.75"><title>2026-10-31: 0h 50m</title></rect>
+<text x="467.00" y="225.33" font-size="9.5" fill="#E6EDF3" text-anchor="middle">0h50</text>
+<text x="467.00" y="281.00" font-size="11" fill="#B6C2D2" text-anchor="middle">Sat</text>
 <text x="545.00" y="254.00" font-size="11" fill="#B6C2D2" text-anchor="middle">—</text>
-<text x="545.00" y="281.00" font-size="11" fill="#B6C2D2" text-anchor="middle">Sat</text>
-<path d="M38 174.000H584" stroke="#E6EDF3" stroke-width="0.9" stroke-dasharray="5 3"/>
+<text x="545.00" y="281.00" font-size="11" fill="#B6C2D2" text-anchor="middle">Sun</text>
+<path d="M38 156.800H584" stroke="#E6EDF3" stroke-width="0.9" stroke-dasharray="5 3"/>
 <path d="M38 88V260H584" fill="none" stroke="#8B99AC" stroke-width="0.65"/>
 </g></svg>
