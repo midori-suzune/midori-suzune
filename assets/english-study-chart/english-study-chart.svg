@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="600" height="300" viewBox="0 0 600 300" role="img" aria-labelledby="title desc">
 <title id="title">English study — last 7 days</title>
-<desc id="desc">Study last 7 days: 2h 43m (3 of 7 days recorded). Words last 7 days: 216 (3 of 7 days recorded). Current streak: 71 days. Goal: 3 hours per day. 2026-10-30: 0h 49m; 2026-10-31: 1h 06m; 2026-11-01: 0h 48m; 2026-11-02: no data; 2026-11-03: no data; 2026-11-04: no data; 2026-11-05: no data</desc>
+<desc id="desc">Study last 7 days: 1h 54m (2 of 7 days recorded). Words last 7 days: 144 (2 of 7 days recorded). Current streak: 71 days. Goal: 3 hours per day. 2026-10-31: 1h 06m; 2026-11-01: 0h 48m; 2026-11-02: no data; 2026-11-03: no data; 2026-11-04: no data; 2026-11-05: no data; 2026-11-06: no data</desc>
 <rect x="0.5" y="0.5" width="599" height="299" rx="6" fill="#0D1117" stroke="#586575" stroke-width="0.7"/>
 <g font-family="DejaVu Sans Mono,Consolas,monospace" font-weight="400">
-<text x="106.00" y="32.00" font-size="16" fill="#E6EDF3" text-anchor="middle">2h 43m</text>
+<text x="106.00" y="32.00" font-size="16" fill="#E6EDF3" text-anchor="middle">1h 54m</text>
 <text x="106.00" y="53.00" font-size="11" fill="#B6C2D2" text-anchor="middle">Study last 7 days</text>
-<text x="300.00" y="32.00" font-size="16" fill="#E6EDF3" text-anchor="middle">216</text>
+<text x="300.00" y="32.00" font-size="16" fill="#E6EDF3" text-anchor="middle">144</text>
 <text x="300.00" y="53.00" font-size="11" fill="#B6C2D2" text-anchor="middle">Words last 7 days</text>
 <text x="494.00" y="32.00" font-size="16" fill="#E6EDF3" text-anchor="middle">71 days</text>
 <text x="494.00" y="53.00" font-size="11" fill="#B6C2D2" text-anchor="middle">Current streak</text>
@@ -22,23 +22,22 @@
 <text x="31.00" y="125.40" font-size="10" fill="#B6C2D2" text-anchor="end">4h</text>
 <path d="M38 88.000H584" fill="none" stroke="#69788C" stroke-opacity="0.65" stroke-width="0.6" stroke-dasharray="4 3"/>
 <text x="31.00" y="91.00" font-size="10" fill="#B6C2D2" text-anchor="end">5h</text>
-<rect x="56.000" y="231.907" width="42" height="28.093" fill="#EA6D6D" fill-opacity="0.75"><title>2026-10-30: 0h 49m</title></rect>
-<text x="77.00" y="225.91" font-size="9.5" fill="#E6EDF3" text-anchor="middle">0h49</text>
-<text x="77.00" y="281.00" font-size="11" fill="#B6C2D2" text-anchor="middle">Fri</text>
-<rect x="134.000" y="222.160" width="42" height="37.840" fill="#EA6D6D" fill-opacity="0.75"><title>2026-10-31: 1h 06m</title></rect>
-<text x="155.00" y="216.16" font-size="9.5" fill="#E6EDF3" text-anchor="middle">1h06</text>
-<text x="155.00" y="281.00" font-size="11" fill="#B6C2D2" text-anchor="middle">Sat</text>
-<rect x="212.000" y="232.480" width="42" height="27.520" fill="#EA6D6D" fill-opacity="0.75"><title>2026-11-01: 0h 48m</title></rect>
-<text x="233.00" y="226.48" font-size="9.5" fill="#E6EDF3" text-anchor="middle">0h48</text>
-<text x="233.00" y="281.00" font-size="11" fill="#B6C2D2" text-anchor="middle">Sun</text>
+<rect x="56.000" y="222.160" width="42" height="37.840" fill="#EA6D6D" fill-opacity="0.75"><title>2026-10-31: 1h 06m</title></rect>
+<text x="77.00" y="216.16" font-size="9.5" fill="#E6EDF3" text-anchor="middle">1h06</text>
+<text x="77.00" y="281.00" font-size="11" fill="#B6C2D2" text-anchor="middle">Sat</text>
+<rect x="134.000" y="232.480" width="42" height="27.520" fill="#EA6D6D" fill-opacity="0.75"><title>2026-11-01: 0h 48m</title></rect>
+<text x="155.00" y="226.48" font-size="9.5" fill="#E6EDF3" text-anchor="middle">0h48</text>
+<text x="155.00" y="281.00" font-size="11" fill="#B6C2D2" text-anchor="middle">Sun</text>
+<text x="233.00" y="254.00" font-size="11" fill="#B6C2D2" text-anchor="middle">—</text>
+<text x="233.00" y="281.00" font-size="11" fill="#B6C2D2" text-anchor="middle">Mon</text>
 <text x="311.00" y="254.00" font-size="11" fill="#B6C2D2" text-anchor="middle">—</text>
-<text x="311.00" y="281.00" font-size="11" fill="#B6C2D2" text-anchor="middle">Mon</text>
+<text x="311.00" y="281.00" font-size="11" fill="#B6C2D2" text-anchor="middle">Tue</text>
 <text x="389.00" y="254.00" font-size="11" fill="#B6C2D2" text-anchor="middle">—</text>
-<text x="389.00" y="281.00" font-size="11" fill="#B6C2D2" text-anchor="middle">Tue</text>
+<text x="389.00" y="281.00" font-size="11" fill="#B6C2D2" text-anchor="middle">Wed</text>
 <text x="467.00" y="254.00" font-size="11" fill="#B6C2D2" text-anchor="middle">—</text>
-<text x="467.00" y="281.00" font-size="11" fill="#B6C2D2" text-anchor="middle">Wed</text>
+<text x="467.00" y="281.00" font-size="11" fill="#B6C2D2" text-anchor="middle">Thu</text>
 <text x="545.00" y="254.00" font-size="11" fill="#B6C2D2" text-anchor="middle">—</text>
-<text x="545.00" y="281.00" font-size="11" fill="#B6C2D2" text-anchor="middle">Thu</text>
+<text x="545.00" y="281.00" font-size="11" fill="#B6C2D2" text-anchor="middle">Fri</text>
 <path d="M38 156.800H584" stroke="#E6EDF3" stroke-width="0.9" stroke-dasharray="5 3"/>
 <path d="M38 88V260H584" fill="none" stroke="#8B99AC" stroke-width="0.65"/>
 </g></svg>
