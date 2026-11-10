@@ -4,12 +4,6 @@
   "bar_opacity": 0.75,
   "days": [
     {
-      "date": "2026-11-03",
-      "day": "Tue",
-      "minutes": null,
-      "words": null
-    },
-    {
       "date": "2026-11-04",
       "day": "Wed",
       "minutes": null,
@@ -42,6 +36,12 @@
     {
       "date": "2026-11-09",
       "day": "Mon",
+      "minutes": null,
+      "words": null
+    },
+    {
+      "date": "2026-11-10",
+      "day": "Tue",
       "minutes": null,
       "words": null
     }
