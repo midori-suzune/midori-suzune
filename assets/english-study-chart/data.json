@@ -4,12 +4,6 @@
   "bar_opacity": 0.75,
   "days": [
     {
-      "date": "2026-11-12",
-      "day": "Thu",
-      "minutes": 0,
-      "words": 0
-    },
-    {
       "date": "2026-11-13",
       "day": "Fri",
       "minutes": 0,
@@ -44,6 +38,12 @@
       "day": "Wed",
       "minutes": 148,
       "words": 77
+    },
+    {
+      "date": "2026-11-19",
+      "day": "Thu",
+      "minutes": null,
+      "words": null
     }
   ],
   "longest_streak_days": 71
