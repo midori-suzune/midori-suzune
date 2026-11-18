@@ -35,7 +35,7 @@ Mastered: 844 words
 
 <!-- VOCAB_RANK:START -->
 ```text
-Trúc Cơ → Kết Đan  ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣀⣀⣀⣀⣀⣀⣀⣀⣀  70.25%  (843 / 1200 words)
+Trúc Cơ → Kết Đan  ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣀⣀⣀⣀⣀⣀⣀⣀⣀  70.33%  (844 / 1200 words)
 ```
 <!-- VOCAB_RANK:END -->
 
@@ -82,29 +82,29 @@ Date        Skill          Title                                                
 
 <!-- DAILY_READING:START -->
 ```text
-📰 Daily Reading  31 articles 🔥
+📰 Daily Reading  32 articles 🔥
 
 Date       Topic          Article                                                  New Vocab
 ────────────────────────────────────────────────────────────────────────────────────────────────────
+26.11.18   Manga          The Villainess Who Came to Marry-C8                       16 words
+
 26.10.24   Manga          The Villainess Who Came to Marry-C7                       14 words
 
 26.10.22   Manga          The Villainess Who Came to Marry-C6                       13 words
-
-26.10.17   Manga          The Villainess Who Came to Marry-C5                       13 words
 ```
 <!-- DAILY_READING:END -->
 
 <!-- DAILY_WATCHING:START -->
 ```text
-📺 Daily Watching  54 videos 🔥
+📺 Daily Watching  55 videos 🔥
 
 Date       Topic          Title                                                    New Vocab
 ────────────────────────────────────────────────────────────────────────────────────────────────────
+26.11.18   Dreaming of …   Dreaming of being a chef                                  4 words
+
 26.10.22   Cold           How do we adapt to the cold?                               8 words
 
 26.10.17   Gold           Why gold is so valuable                                    8 words
-
-26.10.11   Poetry         The power of poetry                                       10 words
 ```
 <!-- DAILY_WATCHING:END -->
 
