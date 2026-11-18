@@ -82,7 +82,13 @@ def update_chart(today=None):
         "max_hours": 5,
         "bar_opacity": 0.75,
     }
-    data["days"], data["current_streak_days"] = read_days(readme, today, data.get("days", ()))
+    data["days"], current_streak = read_days(readme, today, data.get("days", ()))
+    previous_streak = data.pop("current_streak_days", None)
+    recorded_streaks = (data.get("longest_streak_days"), previous_streak, current_streak)
+    data["longest_streak_days"] = max(
+        (streak for streak in recorded_streaks if streak is not None),
+        default=None,
+    )
     new_data = json.dumps(data, ensure_ascii=False, indent=2) + "\n"
     if not data_path.exists() or data_path.read_text(encoding="utf-8") != new_data:
         data_path.write_text(new_data, encoding="utf-8")

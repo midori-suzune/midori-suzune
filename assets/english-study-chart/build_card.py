@@ -39,9 +39,9 @@ def build(data):
         if day["words"] is not None:
             number(day["words"], "words")
 
-    streak = data.get("current_streak_days")
+    streak = data.get("longest_streak_days")
     if streak is not None:
-        number(streak, "current_streak_days")
+        number(streak, "longest_streak_days")
     maximum = max(int(minimum), math.ceil(goal), *(math.ceil(day["minutes"] / 60) for day in days if day["minutes"] is not None))
     time_days = sum(day["minutes"] is not None for day in days)
     word_days = sum(day["words"] is not None for day in days)
@@ -57,7 +57,7 @@ def build(data):
     description = (
         f"Study last 7 days: {study_label} ({time_days} of 7 days recorded). "
         f"Words last 7 days: {words_label} ({word_days} of 7 days recorded). "
-        f"Current streak: {streak_label}. Goal: {goal:g} hours per day. "
+        f"Longest streak: {streak_label}. Goal: {goal:g} hours per day. "
         + "; ".join(f"{day['date']}: {time_label(day['minutes']) if day['minutes'] is not None else 'no data'}" for day in days)
     )
     s = [
@@ -71,7 +71,7 @@ def build(data):
     def text(x, y, value, size=11, color=fg, anchor="middle"):
         return f'<text x="{x:.2f}" y="{y:.2f}" font-size="{size}" fill="{color}" text-anchor="{anchor}">{escape(str(value))}</text>'
 
-    for x, value, label in [(106, study_label, "Study last 7 days"), (300, words_label, "Words last 7 days"), (494, streak_label, "Current streak")]:
+    for x, value, label in [(106, study_label, "Study last 7 days"), (300, words_label, "Words last 7 days"), (494, streak_label, "Longest streak")]:
         s.extend([text(x, 32, value, 16), text(x, 53, label, 11, muted)])
     s.append('<path d="M202 15V61 M396 15V61" stroke="#586575" stroke-width="0.7"/>')
 

@@ -6,45 +6,45 @@
     {
       "date": "2026-11-12",
       "day": "Thu",
-      "minutes": null,
-      "words": null
+      "minutes": 0,
+      "words": 0
     },
     {
       "date": "2026-11-13",
       "day": "Fri",
-      "minutes": null,
-      "words": null
+      "minutes": 0,
+      "words": 0
     },
     {
       "date": "2026-11-14",
       "day": "Sat",
-      "minutes": null,
-      "words": null
+      "minutes": 0,
+      "words": 0
     },
     {
       "date": "2026-11-15",
       "day": "Sun",
-      "minutes": null,
-      "words": null
+      "minutes": 0,
+      "words": 0
     },
     {
       "date": "2026-11-16",
       "day": "Mon",
-      "minutes": null,
-      "words": null
+      "minutes": 0,
+      "words": 0
     },
     {
       "date": "2026-11-17",
       "day": "Tue",
-      "minutes": null,
-      "words": null
+      "minutes": 0,
+      "words": 0
     },
     {
       "date": "2026-11-18",
       "day": "Wed",
-      "minutes": null,
-      "words": null
+      "minutes": 148,
+      "words": 77
     }
   ],
-  "current_streak_days": 71
+  "longest_streak_days": 71
 }
