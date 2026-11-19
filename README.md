@@ -31,7 +31,7 @@
 
 <!-- OPENQUIZ_STATS:START -->
 Mastered: 844 words
-<!-- OPENQUIZ_STREAK:2 -->
+<!-- OPENQUIZ_STREAK:5 -->
 
 <!-- VOCAB_RANK:START -->
 ```text
