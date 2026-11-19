@@ -72,11 +72,11 @@ Date        Day          Time             Words
 
 Date        Skill          Title                                                   New Vocab
 ────────────────────────────────────────────────────────────────────────────────────────────────────
+26.11.19    Reading        PlayingSoccer                                             8 words
+
 26.10.24    Reading        The Lord Howe Island stick insect                        16 words
 
 26.10.22    Listening      Fairmead online delivery                                  2 words
-
-26.10.17    Listening      Beginner bookbinding courses                              4 words
 ```
 <!-- YOUPASS:END -->
 
@@ -96,15 +96,15 @@ Date       Topic          Article                                               
 
 <!-- DAILY_WATCHING:START -->
 ```text
-📺 Daily Watching  55 videos 🔥
+📺 Daily Watching  56 videos 🔥
 
 Date       Topic          Title                                                    New Vocab
 ────────────────────────────────────────────────────────────────────────────────────────────────────
+26.11.19   Generations     Learning from different generations                       5 words
+
 26.11.18   Dreaming of …   Dreaming of being a chef                                  4 words
 
 26.10.22   Cold           How do we adapt to the cold?                               8 words
-
-26.10.17   Gold           Why gold is so valuable                                    8 words
 ```
 <!-- DAILY_WATCHING:END -->
 
