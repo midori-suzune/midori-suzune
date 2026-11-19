@@ -42,7 +42,7 @@ Trúc Cơ → Kết Đan  ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
 ```text
 ⏱️ English Study Time
 
-Today        2 hrs 28 mins    77 words
+Today        0 mins          0 words
 
 This Week    2 hrs 28 mins    77 words
 
