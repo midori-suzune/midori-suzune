@@ -35,7 +35,7 @@ Mastered: 851 words
 
 <!-- VOCAB_RANK:START -->
 ```text
-Trúc Cơ → Kết Đan  ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣀⣀⣀⣀⣀⣀⣀⣀⣀  70.58%  (847 / 1200 words)
+Trúc Cơ → Kết Đan  ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣀⣀⣀⣀⣀⣀⣀⣀⣀  70.92%  (851 / 1200 words)
 ```
 <!-- VOCAB_RANK:END -->
 
@@ -72,25 +72,25 @@ Date        Day          Time             Words
 
 Date        Skill          Title                                                   New Vocab
 ────────────────────────────────────────────────────────────────────────────────────────────────────
+26.11.21    Reading        The Davies Sister                                         7 words
+
 26.11.19    Reading        PlayingSoccer                                             8 words
 
 26.10.24    Reading        The Lord Howe Island stick insect                        16 words
-
-26.10.22    Listening      Fairmead online delivery                                  2 words
 ```
 <!-- YOUPASS:END -->
 
 <!-- DAILY_READING:START -->
 ```text
-📰 Daily Reading  32 articles 🔥
+📰 Daily Reading  33 articles 🔥
 
 Date       Topic          Article                                                  New Vocab
 ────────────────────────────────────────────────────────────────────────────────────────────────────
+26.11.21   Manga          The Villainess Who Came to Marry-C9                        7 words
+
 26.11.18   Manga          The Villainess Who Came to Marry-C8                       16 words
 
 26.10.24   Manga          The Villainess Who Came to Marry-C7                       14 words
-
-26.10.22   Manga          The Villainess Who Came to Marry-C6                       13 words
 ```
 <!-- DAILY_READING:END -->
 
