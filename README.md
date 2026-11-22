@@ -30,8 +30,8 @@
 
 
 <!-- OPENQUIZ_STATS:START -->
-Mastered: 851 words
-<!-- OPENQUIZ_STREAK:7 -->
+Mastered: 853 words
+<!-- OPENQUIZ_STREAK:8 -->
 
 <!-- VOCAB_RANK:START -->
 ```text
@@ -42,11 +42,11 @@ Trúc Cơ → Kết Đan  ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
 ```text
 ⏱️ English Study Time
 
-Today        0 mins          0 words
+Today        2 hrs 38 mins     104 words
 
-This Week    12 hrs 11 mins    359 words
+This Week    14 hrs 51 mins    463 words
 
-Total        51 hrs 46 mins
+Total        54 hrs 26 mins
 ```
 
 ```text
@@ -54,16 +54,16 @@ Total        51 hrs 46 mins
 
 Date        Day          Time             Words
 ───────────────────────────────────────────────────
-26.11.21    Saturday     2 hrs 52 mins    100 words
+26.11.22    Sunday       2 hrs 38 mins    104 words
+
+26.11.21    Saturday     2 hrs 53 mins    100 words
 
 26.11.20    Friday       3 hrs 15 mins    100 words
 
 26.11.19    Thursday     3 hrs 21 mins    82 words
-
-26.11.18    Wednesday    2 hrs 41 mins    77 words
 ```
 
-<!-- OPENQUIZ_DAYS:{"2026-11-21":[172,100],"2026-11-20":[195,100],"2026-11-19":[201,82],"2026-11-18":[161,77],"2026-11-17":[0,0],"2026-11-16":[0,0],"2026-11-15":[0,0]} -->
+<!-- OPENQUIZ_DAYS:{"2026-11-22":[158,104],"2026-11-21":[173,100],"2026-11-20":[195,100],"2026-11-19":[201,82],"2026-11-18":[161,77],"2026-11-17":[0,0],"2026-11-16":[0,0]} -->
 <!-- OPENQUIZ_STATS:END -->
 
 <!-- YOUPASS:START -->
