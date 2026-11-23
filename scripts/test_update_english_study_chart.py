@@ -185,13 +185,18 @@ Date        Day          Time             Words
         self.assertEqual([row["name"] for row in rows], ["Aug", "Sep", "Oct", "Nov"])
         self.assertEqual(rows[-1]["words"], 30)
 
-    def test_line_chart_keeps_axis_labels_clean_and_scales_the_hours_axis(self):
+    def test_line_chart_keeps_axis_labels_clean_and_scales_the_axes(self):
         rows = updater.monthly_history({"2026-10-01": [2314, 937]}, date(2026, 11, 24))
         svg = updater.build_monthly_chart(rows)
-        self.assertIn('viewBox="0 0 680 246"', svg)
+        self.assertIn('viewBox="0 0 1120 290"', svg)
+        self.assertIn('class="heading" x="286" y="33" text-anchor="middle">Time<', svg)
+        self.assertIn('class="heading" x="876" y="33" text-anchor="middle">Words<', svg)
         self.assertNotIn("🗂️ OpenQuiz History", svg)
         self.assertIn(">20h<", svg)
         self.assertIn(">60h<", svg)
+        for tick in ("0", "500", "1,000", "1,500"):
+            self.assertIn(f">{tick}<", svg)
+        self.assertNotIn(">1,600<", svg)
         self.assertIn(">Oct: 38h 34m<", svg)
         self.assertIn(">Jul<", svg)
         self.assertNotIn(">Jul*<", svg)

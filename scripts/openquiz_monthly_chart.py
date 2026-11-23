@@ -5,12 +5,13 @@ from math import ceil, floor, log10
 from xml.sax.saxutils import escape
 
 
-def ticks_for(values):
+def ticks_for(values, intervals=None):
     peak = max((value for value in values if value is not None), default=0)
-    target = max(1, peak / 4)
+    target = max(1, peak / (intervals or 4))
     magnitude = 10 ** floor(log10(target))
     step = next(factor * magnitude for factor in (1, 2, 4, 5, 10) if factor * magnitude >= target)
-    return range(0, max(1, ceil(peak / step)) * step + 1, step)
+    intervals = intervals or max(1, ceil(peak / step))
+    return range(0, intervals * step + 1, step)
 
 
 def time_label(minutes):
@@ -18,17 +19,16 @@ def time_label(minutes):
     return f"{hours}h {remainder:02d}m" if remainder else f"{hours}h"
 
 
-def draw_plot(rows, left, title, metric):
-    right, top, bottom = left + 260, 54, 202
-    month_inset = 18
+def draw_plot(rows, left, title, metric, ticks):
+    right, top, bottom = left + 428, 54, 246
+    month_inset = 30
     is_time = metric == "minutes"
     values = [row[metric] for row in rows]
     units = [value / 60 if is_time and value is not None else value for value in values]
-    ticks = ticks_for(units)
     maximum = ticks[-1]
     svg = [
         f'<g class="{metric}">',
-        f'<text class="axis" x="{(left + right) / 2:g}" y="33" text-anchor="middle">{title}</text>',
+        f'<text class="heading" x="{(left + right) / 2:g}" y="33" text-anchor="middle">{title}</text>',
     ]
     for tick in ticks:
         y = bottom - tick / maximum * (bottom - top)
@@ -40,7 +40,7 @@ def draw_plot(rows, left, title, metric):
     points = []
     for i, (row, value) in enumerate(zip(rows, units)):
         px = left + month_inset + i * (right - left - 2 * month_inset) / (len(rows) - 1)
-        svg.append(f'<text class="axis" x="{px:.2f}" y="223" text-anchor="middle">{row["name"]}</text>')
+        svg.append(f'<text class="axis" x="{px:.2f}" y="{bottom + 21}" text-anchor="middle">{row["name"]}</text>')
         points.append(None if value is None else (px, bottom - value / maximum * (bottom - top)))
     for previous, current in pairwise(points):
         if previous is not None and current is not None:
@@ -57,6 +57,8 @@ def draw_plot(rows, left, title, metric):
 
 
 def build(rows):
+    time_ticks = ticks_for(row["minutes"] / 60 for row in rows if row["minutes"] is not None)
+    word_ticks = ticks_for((row["words"] for row in rows), intervals=len(time_ticks) - 1)
     description = []
     for row in rows:
         time = time_label(row["minutes"]) if row["minutes"] is not None else "no recorded time"
@@ -64,12 +66,13 @@ def build(rows):
         source = " (sample)" if row["sample"] else ""
         description.append(f'{row["name"]}{source}: {time}, {words}')
     svg = [
-        '<svg xmlns="http://www.w3.org/2000/svg" width="680" height="246" viewBox="0 0 680 246" role="img" aria-labelledby="title desc">',
+        '<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="290" viewBox="0 0 1120 290" role="img" aria-labelledby="title desc">',
         '<title id="title">OpenQuiz History</title>',
         f'<desc id="desc">{escape(". ".join(description))}</desc>',
         '''<style>
             .frame { fill:none; stroke:#586575; stroke-width:.75; }
             .background { fill:#0d1117; }
+            .heading { fill:#e6edf3; font-size:16px; }
             .axis, .tick { fill:#b6c2d2; }
             .tick { font-size:10px; }
             .grid { fill:none; stroke:#69788c; stroke-opacity:.65; stroke-width:.6; stroke-dasharray:4 3; }
@@ -78,10 +81,10 @@ def build(rows):
             .trend { fill:none; stroke:currentColor; stroke-width:1.65; stroke-linecap:round; }
             circle { fill:currentColor; stroke:#0d1117; stroke-width:1; }
         </style>''',
-        '<rect class="background frame" x=".5" y=".5" width="679" height="245" rx="6"/>',
+        '<rect class="background frame" x=".5" y=".5" width="1119" height="289" rx="6"/>',
         '<g font-family="DejaVu Sans Mono,Consolas,monospace" font-size="11">',
-        '<path class="frame" d="M340 21V226"/>',
-        *draw_plot(rows, 44, "Time", "minutes"),
-        *draw_plot(rows, 402, "Words", "words"),
+        '<path class="frame" d="M560 21V270"/>',
+        *draw_plot(rows, 72, "Time", "minutes", time_ticks),
+        *draw_plot(rows, 662, "Words", "words", word_ticks),
     ]
     return "\n".join([*svg, "</g>", "</svg>", ""])
