@@ -18,24 +18,29 @@ def time_label(minutes):
     return f"{hours}h {remainder:02d}m" if remainder else f"{hours}h"
 
 
-def draw_plot(rows, x, title, metric):
-    left, right, top, bottom = x + 44, x + 300, 78, 175
+def draw_plot(rows, left, title, metric):
+    right, top, bottom = left + 260, 54, 202
+    month_inset = 18
     is_time = metric == "minutes"
     values = [row[metric] for row in rows]
     units = [value / 60 if is_time and value is not None else value for value in values]
     ticks = ticks_for(units)
     maximum = ticks[-1]
-    svg = [f'<text x="{x}" y="56">{title}</text>']
+    svg = [
+        f'<g class="{metric}">',
+        f'<text class="axis" x="{(left + right) / 2:g}" y="33" text-anchor="middle">{title}</text>',
+    ]
     for tick in ticks:
         y = bottom - tick / maximum * (bottom - top)
         label = f"{tick}h" if is_time else f"{tick:,}"
         svg.append(f'<path class="grid" d="M{left} {y:.2f}H{right}"/>')
-        svg.append(f'<text class="axis" x="{left - 7}" y="{y + 4:.2f}" text-anchor="end">{label}</text>')
+        svg.append(f'<text class="tick" x="{left - 7}" y="{y + 3:.2f}" text-anchor="end">{label}</text>')
+    svg.append(f'<path class="frame" d="M{left} {top}V{bottom}H{right}"/>')
 
     points = []
     for i, (row, value) in enumerate(zip(rows, units)):
-        px = left + (i + 0.5) * (right - left) / len(rows)
-        svg.append(f'<text class="axis" x="{px:.2f}" y="193" text-anchor="middle">{row["name"]}</text>')
+        px = left + month_inset + i * (right - left - 2 * month_inset) / (len(rows) - 1)
+        svg.append(f'<text class="axis" x="{px:.2f}" y="223" text-anchor="middle">{row["name"]}</text>')
         points.append(None if value is None else (px, bottom - value / maximum * (bottom - top)))
     for previous, current in pairwise(points):
         if previous is not None and current is not None:
@@ -45,9 +50,9 @@ def draw_plot(rows, x, title, metric):
             continue
         label = time_label(row[metric]) if is_time else f'{row[metric]:,} words'
         source = " (sample)" if row["sample"] else ""
-        kind = "sample" if row["sample"] else "actual"
-        svg.append(f'<circle class="{kind}" cx="{point[0]:.2f}" cy="{point[1]:.2f}" r="3.6">'
+        svg.append(f'<circle cx="{point[0]:.2f}" cy="{point[1]:.2f}" r="3.4">'
                    f'<title>{row["name"]}: {label}{source}</title></circle>')
+    svg.append("</g>")
     return svg
 
 
@@ -58,28 +63,25 @@ def build(rows):
         words = f'{row["words"]:,} words' if row["words"] is not None else "no recorded words"
         source = " (sample)" if row["sample"] else ""
         description.append(f'{row["name"]}{source}: {time}, {words}')
-    height = 212
     svg = [
-        f'<svg xmlns="http://www.w3.org/2000/svg" width="640" height="{height}" viewBox="0 0 640 {height}" role="img" aria-labelledby="title desc">',
+        '<svg xmlns="http://www.w3.org/2000/svg" width="680" height="246" viewBox="0 0 680 246" role="img" aria-labelledby="title desc">',
         '<title id="title">OpenQuiz History</title>',
         f'<desc id="desc">{escape(". ".join(description))}</desc>',
         '''<style>
-            svg { --bg:#f6f8fa; --fg:#1f2328; --muted:#59636e; --grid:#d1d9e0; }
-            @media (prefers-color-scheme: dark) {
-                svg { --bg:#151b23; --fg:#f0f6fc; --muted:#9198a1; --grid:#3d444d; }
-            }
-            text { fill:var(--fg); }
-            .background { fill:var(--bg); }
-            .axis { fill:var(--muted); font-size:10px; }
-            .grid { stroke:var(--grid); }
-            .trend { fill:none; stroke:var(--fg); stroke-width:1.6; }
-            .sample { fill:var(--bg); stroke:var(--fg); stroke-width:1.4; }
-            .actual { fill:var(--fg); }
+            .frame { fill:none; stroke:#586575; stroke-width:.75; }
+            .background { fill:#0d1117; }
+            .axis, .tick { fill:#b6c2d2; }
+            .tick { font-size:10px; }
+            .grid { fill:none; stroke:#69788c; stroke-opacity:.65; stroke-width:.6; stroke-dasharray:4 3; }
+            .minutes { color:#7de39d; }
+            .words { color:#9bb7d9; }
+            .trend { fill:none; stroke:currentColor; stroke-width:1.65; stroke-linecap:round; }
+            circle { fill:currentColor; stroke:#0d1117; stroke-width:1; }
         </style>''',
-        f'<rect class="background" width="640" height="{height}" rx="6"/>',
-        '<g font-family="DejaVu Sans Mono,Consolas,monospace" font-size="12">',
-        '<text x="16" y="28">🗂️ OpenQuiz History</text>',
-        *draw_plot(rows, 16, "Time", "minutes"),
-        *draw_plot(rows, 324, "Words", "words"),
+        '<rect class="background frame" x=".5" y=".5" width="679" height="245" rx="6"/>',
+        '<g font-family="DejaVu Sans Mono,Consolas,monospace" font-size="11">',
+        '<path class="frame" d="M340 21V226"/>',
+        *draw_plot(rows, 44, "Time", "minutes"),
+        *draw_plot(rows, 402, "Words", "words"),
     ]
     return "\n".join([*svg, "</g>", "</svg>", ""])

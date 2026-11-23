@@ -188,6 +188,8 @@ Date        Day          Time             Words
     def test_line_chart_keeps_axis_labels_clean_and_scales_the_hours_axis(self):
         rows = updater.monthly_history({"2026-10-01": [2314, 937]}, date(2026, 11, 24))
         svg = updater.build_monthly_chart(rows)
+        self.assertIn('viewBox="0 0 680 246"', svg)
+        self.assertNotIn("🗂️ OpenQuiz History", svg)
         self.assertIn(">20h<", svg)
         self.assertIn(">60h<", svg)
         self.assertIn(">Oct: 38h 34m<", svg)
@@ -219,19 +221,15 @@ Date        Day          Time             Words
             root = Path(temp)
             (root / "assets").mkdir()
             readme_path = root / "README.md"
-            readme_path.write_text(
-                f"{self.readme}\n\n{updater.HISTORY_START}\n{updater.HISTORY_END}\n\nNext section\n",
-                encoding="utf-8",
-            )
+            original_readme = f"{self.readme}\n\nNext section\n"
+            readme_path.write_text(original_readme, encoding="utf-8")
             with patch.object(updater, "ROOT", root):
                 updater.update_history(date(2026, 11, 1))
-                updated = readme_path.read_text(encoding="utf-8")
+                svg_path = root / updater.HISTORY_IMAGE
+                svg = svg_path.read_text(encoding="utf-8")
                 updater.update_history(date(2026, 11, 1))
-            self.assertEqual(readme_path.read_text(encoding="utf-8"), updated)
-            self.assertTrue(updated.startswith(self.readme))
-            self.assertTrue(updated.endswith("\n\nNext section\n"))
-            self.assertIn(updater.HISTORY_IMAGE, updated)
-            svg = (root / updater.HISTORY_IMAGE).read_text(encoding="utf-8")
+            self.assertEqual(readme_path.read_text(encoding="utf-8"), original_readme)
+            self.assertEqual(svg_path.read_text(encoding="utf-8"), svg)
             self.assertIn("OpenQuiz History", svg)
             self.assertIn("Oct", svg)
 

@@ -16,8 +16,6 @@ ROOT = Path(__file__).resolve().parent.parent
 CHART = ROOT / "assets" / "english-study-chart"
 START = "<!-- OPENQUIZ_STATS:START -->"
 END = "<!-- OPENQUIZ_STATS:END -->"
-HISTORY_START = "<!-- OPENQUIZ_HISTORY:START -->"
-HISTORY_END = "<!-- OPENQUIZ_HISTORY:END -->"
 MONTH_NAMES = ("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
 # Temporary monthly totals. Real observations take precedence and samples
 # stay outside the daily archive used for actual OpenQuiz statistics.
@@ -124,19 +122,12 @@ def monthly_history(archive, today):
 
 
 def update_history(today):
-    readme_path = ROOT / "README.md"
-    readme = readme_path.read_text(encoding="utf-8")
-    start = readme.find(HISTORY_START)
-    end = readme.find(HISTORY_END, start + len(HISTORY_START))
-    if start == -1 or end == -1:
-        raise ValueError("Missing OPENQUIZ_HISTORY markers in README")
+    readme = (ROOT / "README.md").read_text(encoding="utf-8")
     archive_path = ROOT / "assets" / "openquiz-history.json"
     archive_text = archive_path.read_text(encoding="utf-8") if archive_path.exists() else "{}"
     archive = json.loads(archive_text)
     recorded, _ = read_activity(readme)
     merge_history(archive, recorded)
-    image = f'<img src="{HISTORY_IMAGE}" width="640" alt="OpenQuiz History — time and words for the last four completed months" />'
-    updated = readme[:start + len(HISTORY_START)] + "\n" + image + "\n" + readme[end:]
     svg_path = ROOT / HISTORY_IMAGE
     svg = build_monthly_chart(monthly_history(archive, today))
     new_archive = json.dumps(archive, indent=2, sort_keys=True) + "\n"
@@ -144,8 +135,6 @@ def update_history(today):
         archive_path.write_text(new_archive, encoding="utf-8")
     if not svg_path.exists() or svg_path.read_text(encoding="utf-8") != svg:
         svg_path.write_text(svg, encoding="utf-8")
-    if updated != readme:
-        readme_path.write_text(updated, encoding="utf-8")
 
 
 def update_chart(today=None):

@@ -1,63 +1,67 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="640" height="212" viewBox="0 0 640 212" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="246" viewBox="0 0 680 246" role="img" aria-labelledby="title desc">
 <title id="title">OpenQuiz History</title>
 <desc id="desc">Jul (sample): 24h 50m, 640 words. Aug (sample): 52h, 1,396 words. Sep (sample): 31h 25m, 780 words. Oct: 38h 34m, 937 words</desc>
 <style>
-            svg { --bg:#f6f8fa; --fg:#1f2328; --muted:#59636e; --grid:#d1d9e0; }
-            @media (prefers-color-scheme: dark) {
-                svg { --bg:#151b23; --fg:#f0f6fc; --muted:#9198a1; --grid:#3d444d; }
-            }
-            text { fill:var(--fg); }
-            .background { fill:var(--bg); }
-            .axis { fill:var(--muted); font-size:10px; }
-            .grid { stroke:var(--grid); }
-            .trend { fill:none; stroke:var(--fg); stroke-width:1.6; }
-            .sample { fill:var(--bg); stroke:var(--fg); stroke-width:1.4; }
-            .actual { fill:var(--fg); }
+            .frame { fill:none; stroke:#586575; stroke-width:.75; }
+            .background { fill:#0d1117; }
+            .axis, .tick { fill:#b6c2d2; }
+            .tick { font-size:10px; }
+            .grid { fill:none; stroke:#69788c; stroke-opacity:.65; stroke-width:.6; stroke-dasharray:4 3; }
+            .minutes { color:#7de39d; }
+            .words { color:#9bb7d9; }
+            .trend { fill:none; stroke:currentColor; stroke-width:1.65; stroke-linecap:round; }
+            circle { fill:currentColor; stroke:#0d1117; stroke-width:1; }
         </style>
-<rect class="background" width="640" height="212" rx="6"/>
-<g font-family="DejaVu Sans Mono,Consolas,monospace" font-size="12">
-<text x="16" y="28">🗂️ OpenQuiz History</text>
-<text x="16" y="56">Time</text>
-<path class="grid" d="M60 175.00H316"/>
-<text class="axis" x="53" y="179.00" text-anchor="end">0h</text>
-<path class="grid" d="M60 142.67H316"/>
-<text class="axis" x="53" y="146.67" text-anchor="end">20h</text>
-<path class="grid" d="M60 110.33H316"/>
-<text class="axis" x="53" y="114.33" text-anchor="end">40h</text>
-<path class="grid" d="M60 78.00H316"/>
-<text class="axis" x="53" y="82.00" text-anchor="end">60h</text>
-<text class="axis" x="92.00" y="193" text-anchor="middle">Jul</text>
-<text class="axis" x="156.00" y="193" text-anchor="middle">Aug</text>
-<text class="axis" x="220.00" y="193" text-anchor="middle">Sep</text>
-<text class="axis" x="284.00" y="193" text-anchor="middle">Oct</text>
-<path class="trend" d="M92.00 134.85L156.00 90.93"/>
-<path class="trend" d="M156.00 90.93L220.00 124.21"/>
-<path class="trend" d="M220.00 124.21L284.00 112.65"/>
-<circle class="sample" cx="92.00" cy="134.85" r="3.6"><title>Jul: 24h 50m (sample)</title></circle>
-<circle class="sample" cx="156.00" cy="90.93" r="3.6"><title>Aug: 52h (sample)</title></circle>
-<circle class="sample" cx="220.00" cy="124.21" r="3.6"><title>Sep: 31h 25m (sample)</title></circle>
-<circle class="actual" cx="284.00" cy="112.65" r="3.6"><title>Oct: 38h 34m</title></circle>
-<text x="324" y="56">Words</text>
-<path class="grid" d="M368 175.00H624"/>
-<text class="axis" x="361" y="179.00" text-anchor="end">0</text>
-<path class="grid" d="M368 150.75H624"/>
-<text class="axis" x="361" y="154.75" text-anchor="end">400</text>
-<path class="grid" d="M368 126.50H624"/>
-<text class="axis" x="361" y="130.50" text-anchor="end">800</text>
-<path class="grid" d="M368 102.25H624"/>
-<text class="axis" x="361" y="106.25" text-anchor="end">1,200</text>
-<path class="grid" d="M368 78.00H624"/>
-<text class="axis" x="361" y="82.00" text-anchor="end">1,600</text>
-<text class="axis" x="400.00" y="193" text-anchor="middle">Jul</text>
-<text class="axis" x="464.00" y="193" text-anchor="middle">Aug</text>
-<text class="axis" x="528.00" y="193" text-anchor="middle">Sep</text>
-<text class="axis" x="592.00" y="193" text-anchor="middle">Oct</text>
-<path class="trend" d="M400.00 136.20L464.00 90.37"/>
-<path class="trend" d="M464.00 90.37L528.00 127.71"/>
-<path class="trend" d="M528.00 127.71L592.00 118.19"/>
-<circle class="sample" cx="400.00" cy="136.20" r="3.6"><title>Jul: 640 words (sample)</title></circle>
-<circle class="sample" cx="464.00" cy="90.37" r="3.6"><title>Aug: 1,396 words (sample)</title></circle>
-<circle class="sample" cx="528.00" cy="127.71" r="3.6"><title>Sep: 780 words (sample)</title></circle>
-<circle class="actual" cx="592.00" cy="118.19" r="3.6"><title>Oct: 937 words</title></circle>
+<rect class="background frame" x=".5" y=".5" width="679" height="245" rx="6"/>
+<g font-family="DejaVu Sans Mono,Consolas,monospace" font-size="11">
+<path class="frame" d="M340 21V226"/>
+<g class="minutes">
+<text class="axis" x="174" y="33" text-anchor="middle">Time</text>
+<path class="grid" d="M44 202.00H304"/>
+<text class="tick" x="37" y="205.00" text-anchor="end">0h</text>
+<path class="grid" d="M44 152.67H304"/>
+<text class="tick" x="37" y="155.67" text-anchor="end">20h</text>
+<path class="grid" d="M44 103.33H304"/>
+<text class="tick" x="37" y="106.33" text-anchor="end">40h</text>
+<path class="grid" d="M44 54.00H304"/>
+<text class="tick" x="37" y="57.00" text-anchor="end">60h</text>
+<path class="frame" d="M44 54V202H304"/>
+<text class="axis" x="62.00" y="223" text-anchor="middle">Jul</text>
+<text class="axis" x="136.67" y="223" text-anchor="middle">Aug</text>
+<text class="axis" x="211.33" y="223" text-anchor="middle">Sep</text>
+<text class="axis" x="286.00" y="223" text-anchor="middle">Oct</text>
+<path class="trend" d="M62.00 140.74L136.67 73.73"/>
+<path class="trend" d="M136.67 73.73L211.33 124.51"/>
+<path class="trend" d="M211.33 124.51L286.00 106.87"/>
+<circle cx="62.00" cy="140.74" r="3.4"><title>Jul: 24h 50m (sample)</title></circle>
+<circle cx="136.67" cy="73.73" r="3.4"><title>Aug: 52h (sample)</title></circle>
+<circle cx="211.33" cy="124.51" r="3.4"><title>Sep: 31h 25m (sample)</title></circle>
+<circle cx="286.00" cy="106.87" r="3.4"><title>Oct: 38h 34m</title></circle>
+</g>
+<g class="words">
+<text class="axis" x="532" y="33" text-anchor="middle">Words</text>
+<path class="grid" d="M402 202.00H662"/>
+<text class="tick" x="395" y="205.00" text-anchor="end">0</text>
+<path class="grid" d="M402 165.00H662"/>
+<text class="tick" x="395" y="168.00" text-anchor="end">400</text>
+<path class="grid" d="M402 128.00H662"/>
+<text class="tick" x="395" y="131.00" text-anchor="end">800</text>
+<path class="grid" d="M402 91.00H662"/>
+<text class="tick" x="395" y="94.00" text-anchor="end">1,200</text>
+<path class="grid" d="M402 54.00H662"/>
+<text class="tick" x="395" y="57.00" text-anchor="end">1,600</text>
+<path class="frame" d="M402 54V202H662"/>
+<text class="axis" x="420.00" y="223" text-anchor="middle">Jul</text>
+<text class="axis" x="494.67" y="223" text-anchor="middle">Aug</text>
+<text class="axis" x="569.33" y="223" text-anchor="middle">Sep</text>
+<text class="axis" x="644.00" y="223" text-anchor="middle">Oct</text>
+<path class="trend" d="M420.00 142.80L494.67 72.87"/>
+<path class="trend" d="M494.67 72.87L569.33 129.85"/>
+<path class="trend" d="M569.33 129.85L644.00 115.33"/>
+<circle cx="420.00" cy="142.80" r="3.4"><title>Jul: 640 words (sample)</title></circle>
+<circle cx="494.67" cy="72.87" r="3.4"><title>Aug: 1,396 words (sample)</title></circle>
+<circle cx="569.33" cy="129.85" r="3.4"><title>Sep: 780 words (sample)</title></circle>
+<circle cx="644.00" cy="115.33" r="3.4"><title>Oct: 937 words</title></circle>
+</g>
 </g>
 </svg>

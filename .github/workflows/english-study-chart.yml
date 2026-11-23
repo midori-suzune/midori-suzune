@@ -28,7 +28,7 @@ jobs:
 
       - name: Commit updated OpenQuiz stats if changed
         run: |
-          git add README.md assets/openquiz-history.json assets/openquiz-monthly-chart.svg assets/english-study-chart/data.json assets/english-study-chart/english-study-chart.svg
+          git add assets/openquiz-history.json assets/openquiz-monthly-chart.svg assets/english-study-chart/data.json assets/english-study-chart/english-study-chart.svg
           if git diff --cached --quiet; then
             echo "OpenQuiz chart and history are already up to date."
             exit 0

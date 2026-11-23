@@ -24,6 +24,9 @@
 <br />
 <br />
 <img src="assets/english-study-chart/english-study-chart.svg" width="600" alt="English study over the last 7 days" />
+<br />
+<br />
+<img src="assets/openquiz-monthly-chart.svg" width="680" alt="OpenQuiz History — time and words for the last four completed months" />
 </div>
 
 <h2 align="center"> 📚 Fluent English When ? 📚 </h2>
@@ -65,10 +68,6 @@ Date        Day          Time             Words
 
 <!-- OPENQUIZ_DAYS:{"2026-11-23":[133,104],"2026-11-22":[161,104],"2026-11-21":[173,100],"2026-11-20":[195,100],"2026-11-19":[201,82],"2026-11-18":[161,77],"2026-11-17":[0,0]} -->
 <!-- OPENQUIZ_STATS:END -->
-
-<!-- OPENQUIZ_HISTORY:START -->
-<img src="assets/openquiz-monthly-chart.svg" width="640" alt="OpenQuiz History — time and words for the last four completed months" />
-<!-- OPENQUIZ_HISTORY:END -->
 
 <!-- YOUPASS:START -->
 ```text
