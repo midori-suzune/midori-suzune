@@ -66,6 +66,18 @@ Date        Day          Time             Words
 <!-- OPENQUIZ_DAYS:{"2026-11-23":[105,104],"2026-11-22":[161,104],"2026-11-21":[173,100],"2026-11-20":[195,100],"2026-11-19":[201,82],"2026-11-18":[161,77],"2026-11-17":[0,0]} -->
 <!-- OPENQUIZ_STATS:END -->
 
+<!-- OPENQUIZ_HISTORY:START -->
+```text
+🗂️ OpenQuiz History
+
+Month    Time              Words
+────────────────────────────────────
+Oct      38 hrs 34 mins    937 words
+```
+
+*Partial data. Days with both metrics: Oct (15/31 days).*
+<!-- OPENQUIZ_HISTORY:END -->
+
 <!-- YOUPASS:START -->
 ```text
 📋 Recent Activity

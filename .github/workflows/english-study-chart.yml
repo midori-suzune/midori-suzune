@@ -21,20 +21,20 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Read OpenQuiz activity and rebuild chart
+      - name: Update OpenQuiz chart and monthly history
         run: |
           git pull --ff-only origin master
           python3 scripts/update-english-study-chart.py
 
-      - name: Commit updated chart if changed
+      - name: Commit updated OpenQuiz stats if changed
         run: |
-          git add assets/english-study-chart/data.json assets/english-study-chart/english-study-chart.svg
+          git add README.md assets/openquiz-history.json assets/english-study-chart/data.json assets/english-study-chart/english-study-chart.svg
           if git diff --cached --quiet; then
-            echo "English Study chart is already up to date."
+            echo "OpenQuiz chart and history are already up to date."
             exit 0
           fi
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "Update English Study chart [skip ci]"
+          git commit -m "Update OpenQuiz chart and history [skip ci]"
           git push origin HEAD:master

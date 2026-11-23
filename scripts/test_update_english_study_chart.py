@@ -159,6 +159,60 @@ Date        Day          Time             Words
         self.assertEqual(days[-2]["minutes"], 281)
         self.assertIn("4h41", chart.build({"days": days, "longest_streak_days": 65}))
 
+    def test_monthly_history_limits_calendar_months_across_year_boundary(self):
+        archive = {
+            "2026-09-01": [60, 1],
+            "2026-10-01": [60, 2],
+            "2026-11-01": [60, 3],
+            "2026-12-01": [60, 4],
+            "2027-01-01": [60, 5],
+            "2027-02-01": [60, 6],
+            "2027-03-01": [60, 7],
+        }
+        history = updater.render_monthly_history(archive, date(2027, 2, 1))
+        rows = [line.split()[0] for line in history.splitlines() if " words" in line]
+        self.assertEqual(rows, ["Jan", "Dec", "Nov", "Oct"])
+        self.assertNotIn("Sep", history)
+        self.assertNotIn("Feb", history)
+        del archive["2026-12-01"], archive["2027-01-01"]
+        history = updater.render_monthly_history(archive, date(2027, 2, 1))
+        self.assertIn("Nov", history)
+        self.assertNotIn("Sep", history)
+
+    def test_history_updates_daily_samples_and_preserves_missing_metrics(self):
+        archive = {"2026-10-25": [50, 1000]}
+        samples = {
+            date(2026, 10, 25): {"minutes": 60, "words": None},
+            date(2026, 10, 26): {"minutes": 30, "words": 0},
+            date(2026, 10, 27): {"minutes": 0, "words": 0},
+        }
+        updater.merge_history(archive, samples)
+        updater.merge_history(archive, samples)
+        self.assertEqual(archive, {"2026-10-25": [60, 1000], "2026-10-26": [30, 0]})
+        history = updater.render_monthly_history(archive, date(2026, 11, 1))
+        self.assertIn("1 hr 30 mins", history)
+        self.assertIn("1,000 words", history)
+        self.assertIn("Oct (2/31 days)", history)
+
+    def test_history_update_leaves_the_activity_section_intact(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            (root / "assets").mkdir()
+            readme_path = root / "README.md"
+            readme_path.write_text(
+                f"{self.readme}\n\n{updater.HISTORY_START}\n{updater.HISTORY_END}\n\nNext section\n",
+                encoding="utf-8",
+            )
+            with patch.object(updater, "ROOT", root):
+                updater.update_history(date(2026, 11, 1))
+                updated = readme_path.read_text(encoding="utf-8")
+                updater.update_history(date(2026, 11, 1))
+            self.assertEqual(readme_path.read_text(encoding="utf-8"), updated)
+            self.assertTrue(updated.startswith(self.readme))
+            self.assertTrue(updated.endswith("\n\nNext section\n"))
+            self.assertIn("🗂️ OpenQuiz History", updated)
+            self.assertIn("Oct", updated)
+
 
 if __name__ == "__main__":
     unittest.main()
