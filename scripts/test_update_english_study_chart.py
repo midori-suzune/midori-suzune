@@ -169,15 +169,37 @@ Date        Day          Time             Words
             "2027-02-01": [60, 6],
             "2027-03-01": [60, 7],
         }
-        history = updater.render_monthly_history(archive, date(2027, 2, 1))
-        rows = [line.split()[0] for line in history.splitlines() if " words" in line]
-        self.assertEqual(rows, ["Jan", "Dec", "Nov", "Oct"])
-        self.assertNotIn("Sep", history)
-        self.assertNotIn("Feb", history)
+        rows = updater.monthly_history(archive, date(2027, 2, 1))
+        self.assertEqual([row["name"] for row in rows], ["Oct", "Nov", "Dec", "Jan"])
         del archive["2026-12-01"], archive["2027-01-01"]
-        history = updater.render_monthly_history(archive, date(2027, 2, 1))
-        self.assertIn("Nov", history)
-        self.assertNotIn("Sep", history)
+        rows = updater.monthly_history(archive, date(2027, 2, 1))
+        self.assertEqual([row["words"] for row in rows], [2, 3, None, None])
+
+    def test_monthly_samples_roll_off_and_real_data_replaces_a_sample(self):
+        archive = {"2026-08-01": [45, 7], "2026-10-01": [2314, 937], "2026-11-01": [90, 30]}
+        rows = updater.monthly_history(archive, date(2026, 11, 30))
+        self.assertEqual([row["name"] for row in rows], ["Jul", "Aug", "Sep", "Oct"])
+        self.assertEqual([row["sample"] for row in rows], [True, False, True, False])
+        self.assertEqual(rows[1]["minutes"], 45)
+        rows = updater.monthly_history(archive, date(2026, 12, 1))
+        self.assertEqual([row["name"] for row in rows], ["Aug", "Sep", "Oct", "Nov"])
+        self.assertEqual(rows[-1]["words"], 30)
+
+    def test_line_chart_keeps_axis_labels_clean_and_scales_the_hours_axis(self):
+        rows = updater.monthly_history({"2026-10-01": [2314, 937]}, date(2026, 11, 24))
+        svg = updater.build_monthly_chart(rows)
+        self.assertIn(">20h<", svg)
+        self.assertIn(">60h<", svg)
+        self.assertIn(">Oct: 38h 34m<", svg)
+        self.assertIn(">Jul<", svg)
+        self.assertNotIn(">Jul*<", svg)
+        self.assertNotIn("Sample data", svg)
+        self.assertIn(">Jul: 24h 50m (sample)<", svg)
+        rows = updater.monthly_history({"2027-02-01": [2314, 937]}, date(2027, 3, 1))
+        svg = updater.build_monthly_chart(rows)
+        self.assertIn(">40h<", svg)
+        self.assertNotIn("Sample data", svg)
+        self.assertNotIn('<path class="trend"', svg)
 
     def test_history_updates_daily_samples_and_preserves_missing_metrics(self):
         archive = {"2026-10-25": [50, 1000]}
@@ -189,10 +211,8 @@ Date        Day          Time             Words
         updater.merge_history(archive, samples)
         updater.merge_history(archive, samples)
         self.assertEqual(archive, {"2026-10-25": [60, 1000], "2026-10-26": [30, 0]})
-        history = updater.render_monthly_history(archive, date(2026, 11, 1))
-        self.assertIn("1 hr 30 mins", history)
-        self.assertIn("1,000 words", history)
-        self.assertTrue(history.endswith("```"))
+        oct_stats = updater.monthly_history(archive, date(2026, 11, 1))[-1]
+        self.assertEqual(oct_stats, {"name": "Oct", "minutes": 90, "words": 1000, "sample": False})
 
     def test_history_update_leaves_the_activity_section_intact(self):
         with tempfile.TemporaryDirectory() as temp:
@@ -210,8 +230,10 @@ Date        Day          Time             Words
             self.assertEqual(readme_path.read_text(encoding="utf-8"), updated)
             self.assertTrue(updated.startswith(self.readme))
             self.assertTrue(updated.endswith("\n\nNext section\n"))
-            self.assertIn("🗂️ OpenQuiz History", updated)
-            self.assertIn("Oct", updated)
+            self.assertIn(updater.HISTORY_IMAGE, updated)
+            svg = (root / updater.HISTORY_IMAGE).read_text(encoding="utf-8")
+            self.assertIn("OpenQuiz History", svg)
+            self.assertIn("Oct", svg)
 
 
 if __name__ == "__main__":

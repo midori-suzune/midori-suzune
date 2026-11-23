@@ -10,6 +10,8 @@ from datetime import date, datetime, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
+from openquiz_monthly_chart import build as build_monthly_chart
+
 ROOT = Path(__file__).resolve().parent.parent
 CHART = ROOT / "assets" / "english-study-chart"
 START = "<!-- OPENQUIZ_STATS:START -->"
@@ -17,6 +19,10 @@ END = "<!-- OPENQUIZ_STATS:END -->"
 HISTORY_START = "<!-- OPENQUIZ_HISTORY:START -->"
 HISTORY_END = "<!-- OPENQUIZ_HISTORY:END -->"
 MONTH_NAMES = ("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
+# Temporary monthly totals. Real observations take precedence and samples
+# stay outside the daily archive used for actual OpenQuiz statistics.
+MONTHLY_SAMPLES = {(2026, 7): (1490, 640), (2026, 8): (3120, 1396), (2026, 9): (1885, 780)}
+HISTORY_IMAGE = "assets/openquiz-monthly-chart.svg"
 ROW = re.compile(
     r"^\s*(\d{2}\.\d{2}\.\d{2})\s+\w+\s+((?:\d+\s+hrs?\s+)?\d+\s+mins)\s+(\d+\s+words|—)\s*$",
     re.MULTILINE,
@@ -95,7 +101,7 @@ def merge_history(archive, recorded):
         ]
 
 
-def render_monthly_history(archive, today):
+def monthly_history(archive, today):
     rows = []
     month_start = today.replace(day=1)
     for _ in range(4):
@@ -104,29 +110,17 @@ def render_monthly_history(archive, today):
         days_in_month = monthrange(year, month)[1]
         dates = (date(year, month, day).isoformat() for day in range(1, days_in_month + 1))
         readings = [archive[key] for key in dates if key in archive]
-        if not readings:
-            continue
-        name = MONTH_NAMES[month - 1]
         minutes = [value for value, _ in readings if value is not None]
         words = [value for _, value in readings if value is not None]
-        hours, remainder = divmod(sum(minutes), 60)
-        duration = f"{remainder} mins" if minutes else "—"
-        if hours:
-            duration = f"{hours} {'hr' if hours == 1 else 'hrs'} {duration}"
-        rows.append((name, duration, f"{sum(words):,} words" if words else "—"))
-
-    lines = ["```text", "🗂️ OpenQuiz History", ""]
-    if rows:
-        time_width = max(len("Time"), *(len(duration) for _, duration, _ in rows))
-        words_width = max(len("Words"), *(len(words) for _, _, words in rows))
-        lines += [f"Month    {'Time':<{time_width}}    Words", "─" * (13 + time_width + words_width)]
-        for month, duration, words in rows:
-            lines += [f"{month:<5}    {duration:<{time_width}}    {words}", ""]
-        lines.pop()
-    else:
-        lines.append("No records for the last 4 completed months.")
-    lines.append("```")
-    return "\n".join(lines)
+        sample = MONTHLY_SAMPLES.get((year, month)) if not readings else None
+        totals = sample or (sum(minutes) if minutes else None, sum(words) if words else None)
+        rows.append({
+            "name": MONTH_NAMES[month - 1],
+            "minutes": totals[0],
+            "words": totals[1],
+            "sample": sample is not None,
+        })
+    return rows[::-1]
 
 
 def update_history(today):
@@ -141,10 +135,15 @@ def update_history(today):
     archive = json.loads(archive_text)
     recorded, _ = read_activity(readme)
     merge_history(archive, recorded)
-    updated = readme[:start + len(HISTORY_START)] + "\n" + render_monthly_history(archive, today) + "\n" + readme[end:]
+    image = f'<img src="{HISTORY_IMAGE}" width="640" alt="OpenQuiz History — time and words for the last four completed months" />'
+    updated = readme[:start + len(HISTORY_START)] + "\n" + image + "\n" + readme[end:]
+    svg_path = ROOT / HISTORY_IMAGE
+    svg = build_monthly_chart(monthly_history(archive, today))
     new_archive = json.dumps(archive, indent=2, sort_keys=True) + "\n"
     if new_archive != archive_text:
         archive_path.write_text(new_archive, encoding="utf-8")
+    if not svg_path.exists() or svg_path.read_text(encoding="utf-8") != svg:
+        svg_path.write_text(svg, encoding="utf-8")
     if updated != readme:
         readme_path.write_text(updated, encoding="utf-8")
 

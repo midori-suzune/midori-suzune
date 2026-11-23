@@ -67,13 +67,7 @@ Date        Day          Time             Words
 <!-- OPENQUIZ_STATS:END -->
 
 <!-- OPENQUIZ_HISTORY:START -->
-```text
-🗂️ OpenQuiz History
-
-Month    Time              Words
-────────────────────────────────────
-Oct      38 hrs 34 mins    937 words
-```
+<img src="assets/openquiz-monthly-chart.svg" width="640" alt="OpenQuiz History — time and words for the last four completed months" />
 <!-- OPENQUIZ_HISTORY:END -->
 
 <!-- YOUPASS:START -->
