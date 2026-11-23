@@ -74,8 +74,6 @@ Month    Time              Words
 ────────────────────────────────────
 Oct      38 hrs 34 mins    937 words
 ```
-
-*Partial data. Days with both metrics: Oct (15/31 days).*
 <!-- OPENQUIZ_HISTORY:END -->
 
 <!-- YOUPASS:START -->

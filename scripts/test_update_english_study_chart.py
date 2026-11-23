@@ -192,7 +192,7 @@ Date        Day          Time             Words
         history = updater.render_monthly_history(archive, date(2026, 11, 1))
         self.assertIn("1 hr 30 mins", history)
         self.assertIn("1,000 words", history)
-        self.assertIn("Oct (2/31 days)", history)
+        self.assertTrue(history.endswith("```"))
 
     def test_history_update_leaves_the_activity_section_intact(self):
         with tempfile.TemporaryDirectory() as temp:

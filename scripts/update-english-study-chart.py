@@ -97,7 +97,6 @@ def merge_history(archive, recorded):
 
 def render_monthly_history(archive, today):
     rows = []
-    partial = []
     month_start = today.replace(day=1)
     for _ in range(4):
         month_start = (month_start - timedelta(days=1)).replace(day=1)
@@ -115,9 +114,6 @@ def render_monthly_history(archive, today):
         if hours:
             duration = f"{hours} {'hr' if hours == 1 else 'hrs'} {duration}"
         rows.append((name, duration, f"{sum(words):,} words" if words else "—"))
-        complete_days = sum(minutes is not None and words is not None for minutes, words in readings)
-        if complete_days < days_in_month:
-            partial.append(f"{name} ({complete_days}/{days_in_month} days)")
 
     lines = ["```text", "🗂️ OpenQuiz History", ""]
     if rows:
@@ -130,8 +126,6 @@ def render_monthly_history(archive, today):
     else:
         lines.append("No records for the last 4 completed months.")
     lines.append("```")
-    if partial:
-        lines += ["", f"*Partial data. Days with both metrics: {', '.join(partial)}.*"]
     return "\n".join(lines)
 
 
