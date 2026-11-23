@@ -26,7 +26,7 @@
 <img src="assets/english-study-chart/english-study-chart.svg" width="600" alt="English study over the last 7 days" />
 <br />
 <br />
-<img src="assets/openquiz-monthly-chart.svg" width="1120" alt="OpenQuiz History — time and words for the last four completed months" />
+<img src="assets/openquiz-monthly-chart.svg?v=2" width="1120" alt="OpenQuiz History — time and words for the last four completed months" />
 </div>
 
 <h2 align="center"> 📚 Fluent English When ? 📚 </h2>

@@ -34,13 +34,13 @@ def draw_plot(rows, left, title, metric, ticks):
         y = bottom - tick / maximum * (bottom - top)
         label = f"{tick}h" if is_time else f"{tick:,}"
         svg.append(f'<path class="grid" d="M{left} {y:.2f}H{right}"/>')
-        svg.append(f'<text class="tick" x="{left - 7}" y="{y + 4:.2f}" text-anchor="end">{label}</text>')
+        svg.append(f'<text class="tick" x="{left - 7}" y="{y + 4:.2f}" font-size="14" text-anchor="end">{label}</text>')
     svg.append(f'<path class="frame" d="M{left} {top}V{bottom}H{right}"/>')
 
     points = []
     for i, (row, value) in enumerate(zip(rows, units)):
         px = left + month_inset + i * (right - left - 2 * month_inset) / (len(rows) - 1)
-        svg.append(f'<text class="axis" x="{px:.2f}" y="{bottom + 21}" text-anchor="middle">{row["name"]}</text>')
+        svg.append(f'<text class="axis" x="{px:.2f}" y="{bottom + 21}" font-size="15" text-anchor="middle">{row["name"]}</text>')
         points.append(None if value is None else (px, bottom - value / maximum * (bottom - top)))
     for previous, current in pairwise(points):
         if previous is not None and current is not None:
@@ -74,8 +74,6 @@ def build(rows):
             .background { fill:#0d1117; }
             .heading { fill:#e6edf3; font-size:16px; }
             .axis, .tick { fill:#b6c2d2; }
-            .axis { font-size:14.5px; }
-            .tick { font-size:13.25px; }
             .grid { fill:none; stroke:#69788c; stroke-opacity:.65; stroke-width:.6; stroke-dasharray:4 3; }
             .minutes { color:#7de39d; }
             .words { color:#9bb7d9; }
